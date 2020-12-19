@@ -7,14 +7,10 @@ public class ConveyorBelt : MonoBehaviour
     public Rigidbody rb;
     public Vector3 direction;
     
-
-
-    // Update is called once per frame
     void FixedUpdate()
     {        
         Vector3 pos = rb.position;
         rb.position += direction * speed * Time.fixedDeltaTime;
-        rb.MovePosition(pos);      
-        
+        rb.MovePosition(pos);  
     }
 }
