@@ -2443,7 +2443,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1984970792813498317}
   - component: {fileID: 1209173377564857720}
-  - component: {fileID: 1209173377564857721}
   m_Layer: 0
   m_Name: truck
   m_TagString: Untagged
@@ -2467,19 +2466,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1209173377564857721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209173377564857719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96627277c8c4c4b4db5f39f5ef100feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1209173377564857720}
 --- !u!4 &1326726192105466176
 Transform:
   m_ObjectHideFlags: 0
