@@ -1776,6 +1776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1956236757}
   - component: {fileID: 1956236756}
+  - component: {fileID: 1956236758}
   m_Layer: 0
   m_Name: race (1)
   m_TagString: Untagged
@@ -1818,6 +1819,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 92.517006}
+--- !u!114 &1956236758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956236755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be733ed1a66eae545bcfb639557b889a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2030653805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,6 +1904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2100567232}
   - component: {fileID: 2100567231}
+  - component: {fileID: 2100567233}
   m_Layer: 0
   m_Name: taxi (1)
   m_TagString: Untagged
@@ -1933,6 +1947,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.3560004}
+--- !u!114 &2100567233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100567230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be733ed1a66eae545bcfb639557b889a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &50596595584912491
 Transform:
   m_ObjectHideFlags: 0
@@ -2313,6 +2339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450651903095209}
   - component: {fileID: 919132147629107988}
+  - component: {fileID: 919132147629107989}
   m_Layer: 0
   m_Name: ambulance
   m_TagString: Untagged
@@ -2336,6 +2363,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &919132147629107989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147629107987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be733ed1a66eae545bcfb639557b889a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &919132147902438138
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,6 +2385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450651639513152}
   - component: {fileID: 919132147902438139}
+  - component: {fileID: 919132147902438140}
   m_Layer: 0
   m_Name: police
   m_TagString: Untagged
@@ -2369,6 +2409,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &919132147902438140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147902438138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be733ed1a66eae545bcfb639557b889a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &927002807138184560
 Transform:
   m_ObjectHideFlags: 0
@@ -2443,6 +2495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1984970792813498317}
   - component: {fileID: 1209173377564857720}
+  - component: {fileID: 1209173377564857721}
   m_Layer: 0
   m_Name: truck
   m_TagString: Untagged
@@ -2466,6 +2519,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1209173377564857721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209173377564857719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be733ed1a66eae545bcfb639557b889a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1326726192105466176
 Transform:
   m_ObjectHideFlags: 0
@@ -3062,6 +3127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2370818352276481365}
   - component: {fileID: 3147178407920074736}
+  - component: {fileID: 3147178407920074737}
   m_Layer: 0
   m_Name: tractor
   m_TagString: Untagged
@@ -3085,6 +3151,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3147178407920074737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147178407920074735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be733ed1a66eae545bcfb639557b889a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &3164286643064053852
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3872,6 +3950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4789587091043891028}
   - component: {fileID: 5274797880426098159}
+  - component: {fileID: 5274797880426098160}
   m_Layer: 0
   m_Name: firetruck
   m_TagString: Untagged
@@ -3895,6 +3974,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5274797880426098160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5274797880426098158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be733ed1a66eae545bcfb639557b889a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &5279152923630619786
 MeshRenderer:
   m_ObjectHideFlags: 0
