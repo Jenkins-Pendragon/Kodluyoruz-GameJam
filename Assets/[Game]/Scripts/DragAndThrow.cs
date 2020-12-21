@@ -16,6 +16,7 @@ public class DragAndThrow : MonoBehaviour
 
     private void OnMouseDown()
     {
+        rb.isKinematic = true;
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
         mOffest = gameObject.transform.position+Vector3.up - GetMouseWorldPos();
     }
@@ -23,8 +24,6 @@ public class DragAndThrow : MonoBehaviour
     {
         rb.isKinematic = false;
     }
-
-
     private Vector3 GetMouseWorldPos()
     {
         Vector3 mousePoint = Input.mousePosition;
@@ -34,7 +33,6 @@ public class DragAndThrow : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        rb.isKinematic = true;
         transform.position = GetMouseWorldPos() + mOffest;
     }
 }
