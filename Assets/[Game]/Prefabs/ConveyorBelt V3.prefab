@@ -234,10 +234,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.22
+  m_Radius: 0.590371
   m_Height: 4.32
   m_Direction: 1
-  m_Center: {x: 0, y: 0.47486997, z: 0.31992248}
+  m_Center: {x: 0.0010623932, y: 0.47486997, z: 0.31992245}
 --- !u!1 &1341272906634668045
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341272906656717834}
   m_Layer: 0
-  m_Name: ConveyorBelt 1
+  m_Name: ConveyorBelt V3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -952,8 +952,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6276014300452673978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -0.87, z: 4.8}
-  m_LocalScale: {x: 1, y: 2, z: 2}
+  m_LocalPosition: {x: -0.08, y: -0.87, z: 4.8}
+  m_LocalScale: {x: 0.96, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1341272906656717834}
   m_RootOrder: 7
@@ -1052,4 +1052,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.3
   rb: {fileID: 8461788789621824729}
-  direction: {x: 0, y: 0, z: 1}
+  direction: {x: -1, y: 0, z: 0}
