@@ -13,7 +13,14 @@ public class ToyDatabase : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             int randomNumber = Random.Range(0, myToys.Count);
-            myToyDic.Add(myToys[randomNumber].itemID, myToys[randomNumber]);
+            if (!myToyDic.ContainsKey(myToys[randomNumber].itemID))
+            {
+                myToyDic.Add(myToys[randomNumber].itemID, myToys[randomNumber]);
+            }
+            else
+            {
+                i--;
+            }
         }
         return myToyDic;
     }
