@@ -24,6 +24,16 @@ public class ToyDatabase : MonoBehaviour
         }
         return myToyDic;
     }
+    public Dictionary<int, Toy> GenerateOrder(int orderObjectCount, Dictionary<int, Toy> myCurrentPool)
+    {
+        Dictionary<int, Toy> myToyDic = new Dictionary<int, Toy>();
+        for (int i = 0; i < orderObjectCount; i++)
+        {
+            int j = Random.Range(0, myCurrentPool.Count);
+            myToyDic.Add(myCurrentPool[i].itemID, myCurrentPool[j]);
+        }
+        return myToyDic;
+    }
 }
 [System.Serializable]
 public class Toy
