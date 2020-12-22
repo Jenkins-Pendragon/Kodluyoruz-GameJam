@@ -1326,7 +1326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow: {fileID: 1537032003227981755, guid: 8a81abacd0ab19340b66718e934b47a6, type: 3}
   pathCreator: {fileID: 915086703}
-  frequency: 10
+  frequency: 8
   speed: 0.5
 --- !u!4 &2024216367
 Transform:
@@ -1340,7 +1340,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2043038996
 GameObject:
@@ -1365,13 +1365,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043038996}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 915086704}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1341272906519099507}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2100567230
 GameObject:
@@ -2041,7 +2041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341272906519099507}
   m_Layer: 0
-  m_Name: ConveyorBelt V3
+  m_Name: ConveyorBeltWithArrows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2058,12 +2058,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4735472098179682548}
-  - {fileID: 1341272906716868134}
-  - {fileID: 1341272906538978418}
-  - {fileID: 1341272907280835740}
   - {fileID: 1341272906622169307}
+  - {fileID: 1341272906716868134}
+  - {fileID: 1341272907280835740}
+  - {fileID: 4735472098179682548}
+  - {fileID: 1341272906538978418}
   - {fileID: 1712400423885205076}
+  - {fileID: 2043038997}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2129,7 +2130,7 @@ Transform:
   m_LocalScale: {x: 4, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1341272906519099507}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1341272906538978420
 GameObject:
@@ -2240,7 +2241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1341272906519099507}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1341272906716868132
 MonoBehaviour:
@@ -2299,7 +2300,7 @@ GameObject:
   - component: {fileID: 1341272906716868133}
   - component: {fileID: 1341272906716868132}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2317,7 +2318,7 @@ GameObject:
   - component: {fileID: 1341272907280835715}
   - component: {fileID: 1341272907280835714}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: Curve2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2366,7 +2367,7 @@ Transform:
   m_Children:
   - {fileID: 1341272907775191672}
   m_Father: {fileID: 1341272906519099507}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1341272907775191650
 GameObject:
@@ -3775,7 +3776,7 @@ Transform:
   m_LocalScale: {x: 4, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1341272906519099507}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4789587091043891028
 Transform:
