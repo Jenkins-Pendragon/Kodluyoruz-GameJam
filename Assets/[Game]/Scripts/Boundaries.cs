@@ -7,6 +7,7 @@ public class Boundaries : MonoBehaviour
     private BoxCollider conveyorBelt;
     private float objectWidth;
     private float objectHeight;
+    private Vector2 screenBounds;
     private void Start()
     {        
         //To Do: Get Conveyor Belt collider only once with static manager
