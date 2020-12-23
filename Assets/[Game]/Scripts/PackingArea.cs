@@ -13,8 +13,10 @@ public class PackingArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (isColliding) return;
+
         Item item = other.GetComponent<Item>();
-        if (item != null && !isColliding)
+        if (item != null)
         {
             isColliding = true;            
             PackItem(other.gameObject);

@@ -13,7 +13,7 @@ public class Boundaries : MonoBehaviour
         //To Do: Get Conveyor Belt collider only once with static manager
         conveyorBelt = GameObject.FindGameObjectWithTag("ConveyorBelt").gameObject.GetComponent<BoxCollider>();
         
-        var collider = transform.GetComponent<BoxCollider>();
+        var collider = gameObject.GetComponent<BoxCollider>();
         //We use (z,y) instead (x,z) because we rotate the object when onmousedrag.
         objectWidth = collider.bounds.size.z;
         objectHeight = collider.bounds.size.y;
