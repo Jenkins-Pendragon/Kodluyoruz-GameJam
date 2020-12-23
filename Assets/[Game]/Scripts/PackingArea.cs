@@ -28,6 +28,7 @@ public class PackingArea : MonoBehaviour
             isColliding = true;            
             PackItem(other.gameObject);
             ResetItem(other.gameObject);
+            ItemLevelManager.Instance.activeOrder.Remove(item.itemID);
         }
     }
 
