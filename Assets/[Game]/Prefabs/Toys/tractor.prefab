@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2002292779623681902}
   - component: {fileID: 1054959962489427895}
   - component: {fileID: 4622363890354082029}
-  - component: {fileID: 3850634194971058157}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3850634194971058157
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612252196574003603}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0999999, y: 1.15, z: 1.6132724}
-  m_Center: {x: 0, y: 0.575, z: 0}
 --- !u!1 &1522708328727706220
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +254,8 @@ GameObject:
   - component: {fileID: 3669093090648346042}
   - component: {fileID: 1432130533867632693}
   - component: {fileID: 5459895986624828823}
+  - component: {fileID: 2329327388680106294}
+  - component: {fileID: 1442400074}
   m_Layer: 0
   m_Name: tractor
   m_TagString: Untagged
@@ -282,7 +270,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4152578433276122880}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
@@ -321,6 +309,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2329327388680106294
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4152578433276122880}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6128125, y: 1.5244476, z: 1.9820423}
+  m_Center: {x: -0.000000049670536, y: 0.7622238, z: -0.00507911}
+--- !u!114 &1442400074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4152578433276122880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b02a1fe33a023343b714b764f18c591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4355950009340215005

@@ -253,7 +253,6 @@ GameObject:
   - component: {fileID: 5530865051540564575}
   - component: {fileID: 6461538080788525702}
   - component: {fileID: 1670247972695963100}
-  - component: {fileID: 5121944080152140084}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -326,19 +325,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5121944080152140084
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6879018599621665954}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0999999, y: 1.15, z: 1.6132724}
-  m_Center: {x: 0, y: 0.575, z: 0}
 --- !u!1 &7031508195762252954
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +496,7 @@ GameObject:
   - component: {fileID: 7341776004413745291}
   - component: {fileID: 756709809099359563}
   - component: {fileID: 1897578649341697860}
+  - component: {fileID: 5855921234935512453}
   m_Layer: 0
   m_Name: tractorShovel
   m_TagString: Untagged
@@ -524,7 +511,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7973881302977950257}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
@@ -566,6 +553,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &5855921234935512453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973881302977950257}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5705165, y: 1.4637915, z: 2.359323}
+  m_Center: {x: 0, y: 0.73189574, z: -0.057113368}
 --- !u!1 &8439048625865204432
 GameObject:
   m_ObjectHideFlags: 0

@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 5557251250133012856}
   - component: {fileID: 4887753081646818054}
   - component: {fileID: 3970134352165658786}
+  - component: {fileID: 3794338102768532198}
   m_Layer: 0
   m_Name: race
   m_TagString: Untagged
@@ -268,7 +269,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5067818679630449602}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
@@ -308,6 +309,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &3794338102768532198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5067818679630449602}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1999999, y: 0.6325442, z: 2.5597718}
+  m_Center: {x: 0, y: 0.3162721, z: 0}
 --- !u!1 &7698288936769988270
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +414,6 @@ GameObject:
   - component: {fileID: 7223207024491090860}
   - component: {fileID: 8167161751550839669}
   - component: {fileID: 4598598942279371823}
-  - component: {fileID: 9121445998774753033}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -472,16 +485,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &9121445998774753033
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8614055718516317521}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1999999, y: 0.6325442, z: 2.5597718}
-  m_Center: {x: 0, y: 0.3162721, z: 0}

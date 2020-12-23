@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 5424511868698667503}
   - component: {fileID: 1431792294424028397}
   - component: {fileID: 3565268729408556154}
+  - component: {fileID: 295157616329705160}
   m_Layer: 0
   m_Name: garbageTruck
   m_TagString: Untagged
@@ -187,7 +188,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4615182884148147029}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
@@ -228,6 +229,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &295157616329705160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615182884148147029}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4999999, y: 1.6275681, z: 3.3087728}
+  m_Center: {x: 0, y: 0.81378406, z: -0.054386556}
 --- !u!1 &5035007892476320392
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +495,6 @@ GameObject:
   - component: {fileID: 7090093910098144059}
   - component: {fileID: 8579207804176495586}
   - component: {fileID: 4145966993958646968}
-  - component: {fileID: 8642437830287173429}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -556,16 +569,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8642437830287173429
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8202084429665723846}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4999999, y: 1.3999999, z: 3.3999999}
-  m_Center: {x: 0, y: 0.6999999, z: -0.100000024}
