@@ -8,6 +8,7 @@ public class PackingArea : MonoBehaviour
     public List<Points> itemPoints;
     public float itemDownScale = 0.1f;
     public float tweenDelay = 0.2f;
+    public Transform jumpPoint;
     private List<GameObject> packedItems = new List<GameObject>();
     private bool isColliding;
 
@@ -19,7 +20,11 @@ public class PackingArea : MonoBehaviour
         if (item != null && item.isPackable)
         {
             if (!ItemLevelManager.Instance.activeOrder.ContainsKey(item.itemID))
+            {
+                WrongItem(other.gameObject);
                 return;
+            }
+                
             isColliding = true;            
             PackItem(other.gameObject);
             ResetItem(other.gameObject);
@@ -42,6 +47,17 @@ public class PackingArea : MonoBehaviour
             packedItems[i].transform.DOScale(Vector3.one * itemDownScale, tweenDelay);
         }        
     }
+
+    private void WrongItem(GameObject go)
+    {
+        //int magnitude = 500;
+        /*
+        go.GetComponent<Rigidbody>().isKinematic = false;
+        go.GetComponent<Rigidbody>().AddForce(-5f, 2f, 0, ForceMode.Impulse);
+        */
+
+        go.transform.DOJump(jumpPoint.position, 1.75f, 1, 0.5f);
+;    }
 
     private void ResetItem(GameObject go) 
     {

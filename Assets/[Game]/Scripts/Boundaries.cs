@@ -7,7 +7,7 @@ public class Boundaries : MonoBehaviour
     private BoxCollider conveyorBelt;
     private float objectWidth;
     private float objectHeight;
-    private Vector2 screenBounds;
+    
     private void Start()
     {        
         //To Do: Get Conveyor Belt collider only once with static manager
@@ -23,6 +23,7 @@ public class Boundaries : MonoBehaviour
     {
         Vector3 viewPos = transform.position;
         viewPos.x = Mathf.Clamp(viewPos.x, conveyorBelt.bounds.min.x + objectWidth, conveyorBelt.bounds.max.x- objectWidth);
+        viewPos.y = Mathf.Clamp(viewPos.y, -1*Camera.main.transform.position.y / 2f, Camera.main.transform.position.y / 4f);
         viewPos.z = Mathf.Clamp(viewPos.z, conveyorBelt.bounds.min.z + objectHeight, conveyorBelt.bounds.max.z - objectHeight);
         transform.position = viewPos;
     }
