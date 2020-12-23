@@ -9,6 +9,7 @@ public class CustomPathFollower : MonoBehaviour
     private EndOfPathInstruction endOfPathInstruction = EndOfPathInstruction.Loop;
     public float distanceTravelled;
 
+    //Responsible to initliaze script with paramaters
     public void Initialize(PathCreator pathCreator, float speed, float distanceTravelled)
     {
         this.pathCreator = pathCreator;        

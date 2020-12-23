@@ -10,6 +10,7 @@ public class GenerateConveyorBeltArrow : MonoBehaviour
     public float speed;
     void Start()
     {        
+        //Space that between two arrow
         spacing = pathCreator.path.length / frequency;
         
         for (int i = 0; i < frequency; i++)
