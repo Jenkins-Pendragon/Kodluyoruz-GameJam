@@ -30,7 +30,7 @@ public class ToyDatabase : MonoBehaviour
         for (int i = 0; i < orderObjectCount; i++)
         {
             int j = Random.Range(0, myCurrentPool.Count);
-            myToyDic.Add(myCurrentPool[i].itemID, myCurrentPool[j]);
+            myToyDic.Add(myCurrentPool[j].itemID, myCurrentPool[j]);
         }
         return myToyDic;
     }

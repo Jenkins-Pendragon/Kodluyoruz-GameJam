@@ -18,6 +18,8 @@ public class PackingArea : MonoBehaviour
         Item item = other.GetComponent<Item>();
         if (item != null && item.isPackable)
         {
+            if (!ItemLevelManager.Instance.activeOrder.ContainsKey(item.itemID))
+                return;
             isColliding = true;            
             PackItem(other.gameObject);
             ResetItem(other.gameObject);

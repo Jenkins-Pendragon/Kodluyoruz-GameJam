@@ -208,11 +208,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235653469}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0149090905, y: 0.17127271, z: -0.1992727}
+  m_LocalPosition: {x: -0.0149090905, y: 0.47854543, z: -0.19927266}
   m_LocalScale: {x: 0.36363634, y: 0.3636364, z: 0.3636364}
   m_Children: []
   m_Father: {fileID: 6977664466559901155}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!136 &235653471
 CapsuleCollider:
@@ -341,8 +341,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675261067}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.05}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.050000016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1151562712}
@@ -677,13 +677,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.07, y: 8.36, z: 5.131}
+  m_LocalRotation: {x: 0.6427876, y: 0, z: 0, w: 0.7660445}
+  m_LocalPosition: {x: -0.07, y: 8.36, z: 3.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 80, y: 0, z: 0}
 --- !u!1 &1151562711
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +816,7 @@ GameObject:
   - component: {fileID: 2024216367}
   - component: {fileID: 2024216366}
   - component: {fileID: 2024216368}
+  - component: {fileID: 2024216369}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -865,7 +866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de39845daea3ec24cbf736bec40ea99c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
+  myToys:
   - {fileID: 4693471261534201106, guid: 289e46f8574e78341985c823ce10c666, type: 3}
   - {fileID: 2713988705671754642, guid: 76a29d9782808e84e80920f13157aa0a, type: 3}
   - {fileID: 1301454195924438740, guid: e6e598dec7e2a80428f62be7baefdd97, type: 3}
@@ -878,6 +879,21 @@ MonoBehaviour:
   - {fileID: 4124204168237270042, guid: 684052ed269e7334e80f3a4bc51101b2, type: 3}
   - {fileID: 8335920436570235128, guid: 39ee67708b0710c42989ef4f62ca86cc, type: 3}
   - {fileID: 4550970560599611283, guid: 3e5db80dfdc46da4b94a769d1d40fd11, type: 3}
+--- !u!114 &2024216369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024216365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838e13b16e2d18245ba44392dd793bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAllLevels:
+  - spawnedCount: 2
+    poolCount: 10
 --- !u!33 &5385446243487762
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1084,6 +1100,7 @@ MonoBehaviour:
   itemID: police
   toyIcon: {fileID: 21300000, guid: 203139f6dbaf3c54a91a1b43ed2da2e2, type: 3}
   itemPrefab: {fileID: 2329648268558954064}
+  isPackable: 1
 --- !u!1 &924858590530339644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,7 +2971,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6639728693820918042}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0149090905, y: 0.17127271, z: -1.1279999}
+  m_LocalPosition: {x: -0.0149090905, y: 0.47854543, z: -1.1279999}
   m_LocalScale: {x: 0.36363634, y: 0.3636364, z: 0.3636364}
   m_Children: []
   m_Father: {fileID: 6977664466559901155}
@@ -3044,12 +3061,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7754763634535515993}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.07, y: -0.852, z: 1.888}
+  m_LocalPosition: {x: -0.07, y: -1.697, z: 1.888}
   m_LocalScale: {x: 2.75, y: 2.75, z: 2.75}
   m_Children:
-  - {fileID: 7513288726102609884}
-  - {fileID: 6639728693820918040}
   - {fileID: 235653470}
+  - {fileID: 6639728693820918040}
+  - {fileID: 7513288726102609884}
   - {fileID: 675261068}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -3115,6 +3132,7 @@ MonoBehaviour:
   itemID: garbageTruck
   toyIcon: {fileID: 21300000, guid: e0c80a65f01a66544bccef8bfc4a5f1f, type: 3}
   itemPrefab: {fileID: 3967731068452393125}
+  isPackable: 1
 --- !u!1 &7347858598400449616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,7 +3181,7 @@ Transform:
   m_LocalScale: {x: 0.3388, y: 0.3388, z: 0.3388}
   m_Children: []
   m_Father: {fileID: 6977664466559901155}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7529506430812603375
 MonoBehaviour:
@@ -3411,6 +3429,7 @@ MonoBehaviour:
   itemID: firetruck
   toyIcon: {fileID: 21300000, guid: c1c7ef7d3faed9a4cac328548737d207, type: 3}
   itemPrefab: {fileID: 5443506890752410580}
+  isPackable: 1
 --- !u!114 &8261553054313222109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3426,6 +3445,7 @@ MonoBehaviour:
   itemID: ambulance
   toyIcon: {fileID: 21300000, guid: d8a949d811e6d6f43b3ca95232d389a6, type: 3}
   itemPrefab: {fileID: 3045961004701803742}
+  isPackable: 1
 --- !u!65 &8287967236311442744
 BoxCollider:
   m_ObjectHideFlags: 0
