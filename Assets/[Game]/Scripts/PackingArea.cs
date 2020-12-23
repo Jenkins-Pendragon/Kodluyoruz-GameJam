@@ -16,7 +16,7 @@ public class PackingArea : MonoBehaviour
         if (isColliding) return;
 
         Item item = other.GetComponent<Item>();
-        if (item != null)
+        if (item != null && item.isPackable)
         {
             isColliding = true;            
             PackItem(other.gameObject);

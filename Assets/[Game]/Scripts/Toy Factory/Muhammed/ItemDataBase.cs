@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDataBase : MonoBehaviour
+public class ItemDataBase : Singleton<ItemDataBase>
 {
     public List<Item> items;
     
