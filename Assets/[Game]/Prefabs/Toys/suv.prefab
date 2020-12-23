@@ -495,8 +495,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7893407125163720552}
   - component: {fileID: 2917684721090573313}
-  - component: {fileID: 7300631705075872420}
   - component: {fileID: 2081919669574423002}
+  - component: {fileID: 8313696556695105843}
+  - component: {fileID: 7749566152619581754}
+  - component: {fileID: 2241694376292959565}
   m_Layer: 0
   m_Name: suv
   m_TagString: Untagged
@@ -539,18 +541,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7300631705075872420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7404150166742885842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2081919669574423002
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -564,3 +554,42 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4999999, y: 1.2374896, z: 2.4999998}
   m_Center: {x: 0, y: 0.6187448, z: 0}
+--- !u!114 &8313696556695105843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7404150166742885842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7749566152619581754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7404150166742885842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b02a1fe33a023343b714b764f18c591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2241694376292959565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7404150166742885842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc3a217eb161f45bc96b3641d2ad42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: suv
+  toyIcon: {fileID: 21300000, guid: e398e8d796f55174db9b1892ae8769f9, type: 3}
+  itemPrefab: {fileID: 7404150166742885842}

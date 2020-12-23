@@ -35,11 +35,5 @@ public class ToyDatabase : MonoBehaviour
         return myToyDic;
     }
 }
-[System.Serializable]
-public class Toy
-{
-    public Sprite toyIcon;
-    public int itemID;
-    public GameObject itemPrefab;
-}
+
 

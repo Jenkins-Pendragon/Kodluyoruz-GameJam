@@ -253,9 +253,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3669093090648346042}
   - component: {fileID: 1432130533867632693}
-  - component: {fileID: 5459895986624828823}
   - component: {fileID: 2329327388680106294}
-  - component: {fileID: 1442400074}
+  - component: {fileID: 8371090951870171933}
+  - component: {fileID: 8296856043522340209}
+  - component: {fileID: 4124204168237270042}
   m_Layer: 0
   m_Name: tractor
   m_TagString: Untagged
@@ -299,18 +300,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5459895986624828823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4152578433276122880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2329327388680106294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -324,7 +313,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6128125, y: 1.5244476, z: 1.9820423}
   m_Center: {x: -0.000000049670536, y: 0.7622238, z: -0.00507911}
---- !u!114 &1442400074
+--- !u!114 &8371090951870171933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4152578433276122880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8296856043522340209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -336,6 +337,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b02a1fe33a023343b714b764f18c591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4124204168237270042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4152578433276122880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc3a217eb161f45bc96b3641d2ad42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: tractor
+  toyIcon: {fileID: 21300000, guid: 1b9bf2d8f069a7f43857744cc1b76756, type: 3}
+  itemPrefab: {fileID: 4152578433276122880}
 --- !u!1 &4355950009340215005
 GameObject:
   m_ObjectHideFlags: 0

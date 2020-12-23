@@ -91,8 +91,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1727653523807033546}
   - component: {fileID: 2257847807581845568}
-  - component: {fileID: 6047948282596596619}
   - component: {fileID: 8110748129774551394}
+  - component: {fileID: 2086891783216607108}
+  - component: {fileID: 6957732138425906537}
+  - component: {fileID: 2713988705671754642}
   m_Layer: 0
   m_Name: firetruck
   m_TagString: Untagged
@@ -135,18 +137,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6047948282596596619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067727365614076528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &8110748129774551394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -160,6 +150,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3000001, y: 1.5833999, z: 3.2375405}
   m_Center: {x: 0, y: 0.79169995, z: -0.018770099}
+--- !u!114 &2086891783216607108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067727365614076528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6957732138425906537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067727365614076528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b02a1fe33a023343b714b764f18c591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2713988705671754642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067727365614076528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc3a217eb161f45bc96b3641d2ad42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: firetruck
+  toyIcon: {fileID: 21300000, guid: c1c7ef7d3faed9a4cac328548737d207, type: 3}
+  itemPrefab: {fileID: 2067727365614076528}
 --- !u!1 &2435123008017977534
 GameObject:
   m_ObjectHideFlags: 0

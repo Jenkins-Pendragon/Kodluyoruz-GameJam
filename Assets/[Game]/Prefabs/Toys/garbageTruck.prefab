@@ -172,8 +172,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5424511868698667503}
   - component: {fileID: 1431792294424028397}
-  - component: {fileID: 3565268729408556154}
   - component: {fileID: 295157616329705160}
+  - component: {fileID: 7449213236175592646}
+  - component: {fileID: 2261497743856164895}
+  - component: {fileID: 1301454195924438740}
   m_Layer: 0
   m_Name: garbageTruck
   m_TagString: Untagged
@@ -217,18 +219,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3565268729408556154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4615182884148147029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &295157616329705160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -242,6 +232,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4999999, y: 1.6275681, z: 3.3087728}
   m_Center: {x: 0, y: 0.81378406, z: -0.054386556}
+--- !u!114 &7449213236175592646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615182884148147029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2261497743856164895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615182884148147029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b02a1fe33a023343b714b764f18c591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1301454195924438740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615182884148147029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc3a217eb161f45bc96b3641d2ad42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: garbageTruck
+  toyIcon: {fileID: 21300000, guid: e0c80a65f01a66544bccef8bfc4a5f1f, type: 3}
+  itemPrefab: {fileID: 4615182884148147029}
 --- !u!1 &5035007892476320392
 GameObject:
   m_ObjectHideFlags: 0
