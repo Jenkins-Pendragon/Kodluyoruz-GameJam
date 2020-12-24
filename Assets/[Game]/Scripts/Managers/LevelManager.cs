@@ -9,6 +9,8 @@ public class LevelManager : Singleton<LevelManager>
     public Level CurrentLevel { get { return (LevelData.Levels[LevelIndex]); } }
     public Dictionary<string, Item> levelItems = new Dictionary<string, Item>();
     public Dictionary<string, Item> orderItems = new Dictionary<string, Item>();
+    
+
 
     public int LevelIndex
     {
@@ -37,7 +39,19 @@ public class LevelManager : Singleton<LevelManager>
     }
     public void NewOrder()
     {
-        orderItems = OrderManager.Instance.GenerateOrder(CurrentLevel.orderItemSize, levelItems);      
-    }    
+        orderItems = OrderManager.Instance.GenerateOrder(CurrentLevel.orderItemSize, levelItems);
+        var showorderui = FindObjectOfType<ShowOrderUI>();
+        //if (showorderui != null)
+            showorderui.ShowOrderIcon();
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            NewOrder();
+            
+        }
+    }
 }
 

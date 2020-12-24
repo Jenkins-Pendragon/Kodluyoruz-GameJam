@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa0acb82212ff24593d0f130cfd28b6, type: 3}
   m_Name: Level01
   m_EditorClassIdentifier: 
-  orderItemSize: 1
-  levelItemSize: 5
-  conveyorBeltSpeed: 0.5
+  orderItemSize: 4
+  levelItemSize: 6
+  conveyorBeltSpeed: 5.09
+  spawnRate: 5
