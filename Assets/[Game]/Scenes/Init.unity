@@ -209,9 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63675a78afdf844bae44e761d452448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAllLevels:
-  - spawnedCount: 2
-    poolCount: 10
+  LevelData: {fileID: 11400000, guid: e96e573ea5ee7ab46850778541d8074d, type: 2}
 --- !u!114 &1368726941
 MonoBehaviour:
   m_ObjectHideFlags: 0
