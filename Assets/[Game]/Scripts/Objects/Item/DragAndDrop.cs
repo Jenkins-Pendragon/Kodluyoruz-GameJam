@@ -16,18 +16,14 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseDown()
     {
-        transform.DOKill();
-        transform.DOScale(Vector3.one * 0.5f, rotationDelay);
         rb.isKinematic = true;
         item.isPackable = false;
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        mOffest = gameObject.transform.position + Vector3.up*2f - GetMouseWorldPos();
+        mOffest = gameObject.transform.position + Vector3.up*2f - GetMouseWorldPos();  
         ResetRotation();
     }
     private void OnMouseUp()
-    {
-        transform.DOKill();
-        transform.DOScale(Vector3.one * 0.3f, 0.7f);
+    {        
         rb.isKinematic = false;
         item.isPackable = true;
     }
@@ -39,7 +35,7 @@ public class DragAndDrop : MonoBehaviour
     }
 
     private void OnMouseDrag()
-    {        
+    {
         transform.position = GetMouseWorldPos() + mOffest;
     }
 
