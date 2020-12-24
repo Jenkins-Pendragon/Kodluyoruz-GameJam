@@ -10,6 +10,7 @@ public class CurvedConveyorBelt : MonoBehaviour
         {
             if (speed == 0)
             {
+                //20f static value that provide synchronization with straight roads
                 speed = -20f * LevelManager.Instance.CurrentLevel.conveyorBeltSpeed;
             }
             return speed;

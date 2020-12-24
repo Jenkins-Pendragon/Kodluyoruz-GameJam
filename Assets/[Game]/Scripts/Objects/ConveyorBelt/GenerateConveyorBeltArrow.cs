@@ -7,7 +7,19 @@ public class GenerateConveyorBeltArrow : MonoBehaviour
     public PathCreator pathCreator;
     public int frequency;
     private float spacing;
-    public float speed;
+    private float speed;
+    private float Speed
+    {
+        get
+        {
+            if (speed == 0)
+            {
+                //0.45f static value that provide synchronization with roads
+                speed = 0.45f * LevelManager.Instance.CurrentLevel.conveyorBeltSpeed;
+            }
+            return speed;
+        }
+    }
     void Start()
     {        
         //Space that between two arrow
@@ -16,7 +28,7 @@ public class GenerateConveyorBeltArrow : MonoBehaviour
         for (int i = 0; i < frequency; i++)
         {
             GameObject arrowGo = Instantiate(arrow, Vector3.zero, Quaternion.identity);            
-            arrowGo.AddComponent<CustomPathFollower>().Initialize(pathCreator, speed, spacing*i);            
+            arrowGo.AddComponent<CustomPathFollower>().Initialize(pathCreator, Speed, spacing*i);            
         }
     }    
 }
