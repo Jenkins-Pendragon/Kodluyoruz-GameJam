@@ -25,6 +25,12 @@ public class LevelManager : Singleton<LevelManager>
         }
     }
 
+    private void OnEnable()
+    {
+        SetLevelItems();
+        NewOrder();
+    }
+
     private void SetLevelItems() 
     {
         levelItems = OrderManager.Instance.SelectLevelItems(CurrentLevel.levelItemSize);

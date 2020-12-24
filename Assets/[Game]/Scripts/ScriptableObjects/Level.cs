@@ -8,9 +8,11 @@ public class Level: ScriptableObject
 {
     public int orderItemSize;
     public int levelItemSize;
-    public Level(int _orderItemSize, int _levelItemSize)
+    public float conveyorBeltSpeed;
+    public Level(int _orderItemSize, int _levelItemSize, int _conveyorBeltSpeed)
     {
         this.orderItemSize = _orderItemSize;
         this.levelItemSize = _levelItemSize;
+        this.conveyorBeltSpeed = _conveyorBeltSpeed;
     }
 }
