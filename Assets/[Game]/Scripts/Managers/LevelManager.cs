@@ -5,30 +5,33 @@ using System.Linq;
 
 public class LevelManager : Singleton<LevelManager>
 {
-    public List<Level> myAllLevels = new List<Level>();    
-    public Dictionary<string, Item> activePool;
-    public Dictionary<string, Item> activeOrder;
-    private int currentLevel;
-   
-    private void OnEnable()
+    public LevelData LevelData;
+    public Level CurrentLevel { get { return (LevelData.Levels[LevelIndex]); } }
+    public Dictionary<string, Item> levelItems;
+    public Dictionary<string, Item> orderItems;    
+
+    public int LevelIndex
     {
-        currentLevel = PlayerPrefs.GetInt("Level");
-        activePool = OrderManager.Instance.SelectLevelItems(myAllLevels[currentLevel].poolCount); // 5
-        /*
-        for (int i = 0; i < activePool.Count; i++)
+        get
         {
-            Debug.Log("Pool Item: " + activePool.Keys.ElementAt(i));
+            return PlayerPrefs.GetInt("LastLevel", 0);
         }
-        */
-        NewOrder();
+        set
+        {
+            if (value >= LevelData.Levels.Count)
+                value = 0;
+
+            PlayerPrefs.SetInt("LastLevel", value);
+        }
+    }
+
+    private void SetLevelItems() 
+    {
+        levelItems = OrderManager.Instance.SelectLevelItems(CurrentLevel.levelItemSize);
     }
     public void NewOrder()
     {
-        activeOrder = OrderManager.Instance.GenerateOrder(myAllLevels[currentLevel].spawnedCount, activePool); // 2        
-    }
-    public void LevelUp()
-    {
-        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
-    }
+        orderItems = OrderManager.Instance.GenerateOrder(CurrentLevel.orderItemSize, levelItems);      
+    }    
 }
 

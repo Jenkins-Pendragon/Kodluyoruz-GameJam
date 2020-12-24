@@ -19,7 +19,7 @@ public class PackingArea : MonoBehaviour
         Item item = other.GetComponent<Item>();
         if (item != null && item.isPackable)
         {
-            if (!LevelManager.Instance.activeOrder.ContainsKey(item.itemID))
+            if (!LevelManager.Instance.orderItems.ContainsKey(item.itemID))
             {
                 WrongItem(other.gameObject);
                 return;
