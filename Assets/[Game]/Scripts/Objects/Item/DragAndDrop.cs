@@ -19,11 +19,11 @@ public class DragAndDrop : MonoBehaviour
         rb.isKinematic = true;
         item.isPackable = false;
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        mOffest = gameObject.transform.position + Vector3.up*2f - GetMouseWorldPos();
+        mOffest = gameObject.transform.position + Vector3.up*2f - GetMouseWorldPos();  
         ResetRotation();
     }
     private void OnMouseUp()
-    {
+    {        
         rb.isKinematic = false;
         item.isPackable = true;
     }
@@ -35,7 +35,7 @@ public class DragAndDrop : MonoBehaviour
     }
 
     private void OnMouseDrag()
-    {        
+    {
         transform.position = GetMouseWorldPos() + mOffest;
     }
 
