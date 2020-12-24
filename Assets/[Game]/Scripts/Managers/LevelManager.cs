@@ -5,19 +5,15 @@ using System.Linq;
 
 public class LevelManager : Singleton<LevelManager>
 {
-    public List<Level> myAllLevels = new List<Level>();
-    private ItemDataBase toyDatabase;
+    public List<Level> myAllLevels = new List<Level>();    
     public Dictionary<string, Item> activePool;
     public Dictionary<string, Item> activeOrder;
     private int currentLevel;
-    private void Awake()
-    {
-        toyDatabase = GetComponent<ItemDataBase>();
-    }
+   
     private void OnEnable()
     {
         currentLevel = PlayerPrefs.GetInt("Level");
-        activePool = toyDatabase.CreateLevelToys(myAllLevels[currentLevel].poolCount); // 5
+        activePool = ItemDataBase.Instance.CreateLevelToys(myAllLevels[currentLevel].poolCount); // 5
         /*
         for (int i = 0; i < activePool.Count; i++)
         {
@@ -28,13 +24,7 @@ public class LevelManager : Singleton<LevelManager>
     }
     public void NewOrder()
     {
-        activeOrder = toyDatabase.GenerateOrder(myAllLevels[currentLevel].spawnedCount, activePool); // 2
-        /*
-        for (int i = 0; i < activeOrder.Count; i++)
-        {
-            Debug.Log("Order Item: " + activeOrder.Keys.ElementAt(i));
-        }
-        */
+        activeOrder = ItemDataBase.Instance.GenerateOrder(myAllLevels[currentLevel].spawnedCount, activePool); // 2        
     }
     public void LevelUp()
     {

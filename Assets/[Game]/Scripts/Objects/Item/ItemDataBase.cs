@@ -5,7 +5,7 @@ using System.Linq;
 
 public class ItemDataBase : Singleton<ItemDataBase>
 {
-    public List<Item> myToys;
+    public List<Item> itemDataBase;
     // Bütün Toylarımız Burda    
     // Sadece Random Parametre Kadar Toy Getiriyor
     public Dictionary<string, Item> CreateLevelToys(int count = 10)
@@ -13,10 +13,10 @@ public class ItemDataBase : Singleton<ItemDataBase>
         Dictionary<string, Item> myToyDic = new Dictionary<string, Item>();
         for (int i = 0; i < count; i++)
         {
-            int randomNumber = Random.Range(0, myToys.Count);
-            if (!myToyDic.ContainsKey(myToys[randomNumber].itemID))
+            int randomNumber = Random.Range(0, itemDataBase.Count);
+            if (!myToyDic.ContainsKey(itemDataBase[randomNumber].itemID))
             {
-                myToyDic.Add(myToys[randomNumber].itemID, myToys[randomNumber]);
+                myToyDic.Add(itemDataBase[randomNumber].itemID, itemDataBase[randomNumber]);
             }
             else
             {
