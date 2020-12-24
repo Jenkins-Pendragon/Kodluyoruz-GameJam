@@ -189,6 +189,7 @@ MonoBehaviour:
   itemID: firetruck
   toyIcon: {fileID: 21300000, guid: c1c7ef7d3faed9a4cac328548737d207, type: 3}
   itemPrefab: {fileID: 2067727365614076528}
+  isPackable: 1
 --- !u!1 &2435123008017977534
 GameObject:
   m_ObjectHideFlags: 0

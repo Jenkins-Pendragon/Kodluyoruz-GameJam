@@ -39,7 +39,8 @@ public class PackingArea : MonoBehaviour
         {
             packedItems.Remove(go);
             return;
-        }        
+        }
+        go.transform.DOKill();
         for (int i = 0; i < packedItems.Count; i++)
         {
             packedItems[i].transform.DOMove(itemPoints[count - 1].points[i].position, tweenDelay);
@@ -49,15 +50,12 @@ public class PackingArea : MonoBehaviour
     }
 
     private void WrongItem(GameObject go)
-    {
-        //int magnitude = 500;
-        /*
-        go.GetComponent<Rigidbody>().isKinematic = false;
-        go.GetComponent<Rigidbody>().AddForce(-5f, 2f, 0, ForceMode.Impulse);
-        */
-
+    {        
         go.transform.DOJump(jumpPoint.position, 1.75f, 1, 0.5f);
-;    }
+        Sequence seq = DOTween.Sequence();
+        seq.Append(go.transform.DOScale(Vector3.one * 0.5f, 0.25f));
+        seq.Append(go.transform.DOScale(Vector3.one * 0.3f, 0.25f));         
+    }
 
     private void ResetItem(GameObject go) 
     {

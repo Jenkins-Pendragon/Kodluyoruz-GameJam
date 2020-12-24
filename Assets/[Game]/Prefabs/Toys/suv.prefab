@@ -593,3 +593,4 @@ MonoBehaviour:
   itemID: suv
   toyIcon: {fileID: 21300000, guid: e398e8d796f55174db9b1892ae8769f9, type: 3}
   itemPrefab: {fileID: 7404150166742885842}
+  isPackable: 1

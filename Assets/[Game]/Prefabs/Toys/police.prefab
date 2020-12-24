@@ -517,6 +517,7 @@ MonoBehaviour:
   itemID: police
   toyIcon: {fileID: 21300000, guid: 203139f6dbaf3c54a91a1b43ed2da2e2, type: 3}
   itemPrefab: {fileID: 7045635454467993748}
+  isPackable: 1
 --- !u!1 &7211597246943222089
 GameObject:
   m_ObjectHideFlags: 0
