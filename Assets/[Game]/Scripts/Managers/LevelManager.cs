@@ -41,7 +41,7 @@ public class LevelManager : Singleton<LevelManager>
     {
         orderItems = OrderManager.Instance.GenerateOrder(CurrentLevel.orderItemSize, levelItems);
         var showorderui = FindObjectOfType<ShowOrderUI>();
-        //if (showorderui != null)
+        if (showorderui != null)
             showorderui.ShowOrderIcon();
     }
 
