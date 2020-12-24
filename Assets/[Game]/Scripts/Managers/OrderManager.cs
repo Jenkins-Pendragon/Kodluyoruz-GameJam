@@ -7,14 +7,11 @@ public class OrderManager : Singleton<OrderManager>
 {    
     private List<Item> ItemList { get { return ItemDataBase.Instance.itemDataBase; }}
 
-
-  
-
     //To select items in itemdatabase for the level
-    public Dictionary<string, Item> SelectLevelItems(int count = 10)
+    public Dictionary<string, Item> SelectLevelItems(int levelItemSize)
     {        
         Dictionary<string, Item> levelItems = new Dictionary<string, Item>();
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < levelItemSize; i++)
         {            
             int randomNumber = Random.Range(0, ItemList.Count);
             //Check if item aldready in levelItems

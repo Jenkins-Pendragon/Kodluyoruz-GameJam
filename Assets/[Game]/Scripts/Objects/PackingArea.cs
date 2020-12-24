@@ -9,6 +9,8 @@ public class PackingArea : MonoBehaviour
     public float itemDownScale = 0.1f;
     public float tweenDelay = 0.2f;
     public Transform jumpPoint;
+
+    //List for items in the gif box
     private List<GameObject> packedItems = new List<GameObject>();
     private bool isColliding;
 
@@ -19,6 +21,7 @@ public class PackingArea : MonoBehaviour
         Item item = other.GetComponent<Item>();
         if (item != null && item.isPackable)
         {
+            //Check if the item ordered
             if (!LevelManager.Instance.orderItems.ContainsKey(item.itemID))
             {
                 WrongItem(other.gameObject);
@@ -27,7 +30,7 @@ public class PackingArea : MonoBehaviour
                 
             isColliding = true;            
             PackItem(other.gameObject);
-            ResetItem(other.gameObject);
+            DisableItem(other.gameObject);
         }
     }
 
@@ -35,11 +38,13 @@ public class PackingArea : MonoBehaviour
     {
         packedItems.Add(go);
         int count = packedItems.Count;
+        //Safety for bugs
         if (count > itemPoints.Count)
         {
             packedItems.Remove(go);
             return;
         }
+        //Kill all tweens relavent with this object.        
         go.transform.DOKill();
         for (int i = 0; i < packedItems.Count; i++)
         {
@@ -49,6 +54,7 @@ public class PackingArea : MonoBehaviour
         }        
     }
 
+    //If the item dosent ordered, jump though the belt
     private void WrongItem(GameObject go)
     {        
         go.transform.DOJump(jumpPoint.position, 1.75f, 1, 0.5f);
@@ -57,7 +63,7 @@ public class PackingArea : MonoBehaviour
         seq.Append(go.transform.DOScale(Vector3.one * 0.3f, 0.25f));         
     }
 
-    private void ResetItem(GameObject go) 
+    private void DisableItem(GameObject go) 
     {
         go.GetComponent<BoxCollider>().enabled = false;
         go.GetComponent<Rigidbody>().isKinematic = true;
