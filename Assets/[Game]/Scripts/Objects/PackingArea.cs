@@ -31,6 +31,7 @@ public class PackingArea : MonoBehaviour
             isColliding = true;            
             PackItem(other.gameObject);
             DisableItem(other.gameObject);
+            LevelManager.Instance.orderItems.Remove(item.itemID);
         }
     }
 
@@ -58,10 +59,13 @@ public class PackingArea : MonoBehaviour
     private void WrongItem(GameObject go)
     {
         go.transform.DORotate(new Vector3(0, 90f, 0f), 0.5f);
-        go.transform.DOJump(jumpPoint.position, 1.75f, 1, 0.5f);
+        go.transform.DOJump(jumpPoint.position, 1.5f, 1, 0.5f);
+
+        /*
         Sequence seq = DOTween.Sequence();
         seq.Append(go.transform.DOScale(Vector3.one * 0.5f, 0.25f));
-        seq.Append(go.transform.DOScale(Vector3.one * 0.3f, 0.25f));         
+        seq.Append(go.transform.DOScale(Vector3.one * 0.3f, 0.25f));     
+        */
     }
 
     private void DisableItem(GameObject go) 

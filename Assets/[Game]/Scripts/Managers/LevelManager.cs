@@ -36,7 +36,7 @@ public class LevelManager : Singleton<LevelManager>
         levelItems = OrderManager.Instance.SelectLevelItems(CurrentLevel.levelItemSize);
     }
     public void NewOrder()
-    {
+    {        
         orderItems = OrderManager.Instance.GenerateOrder(CurrentLevel.orderItemSize, levelItems);      
     }    
 }
