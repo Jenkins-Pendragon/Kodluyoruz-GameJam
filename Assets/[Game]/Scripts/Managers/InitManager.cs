@@ -11,7 +11,7 @@ public class InitManager : MonoBehaviour
         yield return SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
         SceneManager.SetActiveScene(SceneManager.GetSceneAt(2));        
         Destroy(gameObject);
-    }
+    } 
 
     
 }

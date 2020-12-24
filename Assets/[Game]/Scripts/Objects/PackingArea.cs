@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Linq;
 
 public class PackingArea : MonoBehaviour
 {   
@@ -22,7 +23,7 @@ public class PackingArea : MonoBehaviour
         if (item != null && item.isPackable)
         {
             //Check if the item ordered
-            if (!LevelManager.Instance.orderItems.ContainsKey(item.itemID))
+            if (!LevelManager.Instance.orderItems.ContainsKey(item.itemID) || packedItems.Find(go => go.GetComponent<Item>().itemID == item.itemID) != null)
             {
                 WrongItem(other.gameObject);
                 return;
