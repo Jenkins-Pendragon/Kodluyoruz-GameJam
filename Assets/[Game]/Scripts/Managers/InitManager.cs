@@ -6,7 +6,7 @@ public class InitManager : MonoBehaviour
     {
         //Init Game Here
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
-        SceneManager.LoadScene(2, LoadSceneMode.Additive);
+        SceneManager.LoadScene(2, LoadSceneMode.Additive);        
         Destroy(gameObject);
     }
 }

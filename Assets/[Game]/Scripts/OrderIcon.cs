@@ -24,11 +24,11 @@ public class OrderIcon : MonoBehaviour
 
 
 
-        for (int i = 0; i < ItemLevelManager.Instance.activeOrder.Count; i++)
+        for (int i = 0; i < LevelManager.Instance.orderItems.Count; i++)
         {
             
             
-            OrderedImage[i].sprite = ItemLevelManager.Instance.activeOrder.Values.ElementAt(i).toyIcon;
+            OrderedImage[i].sprite = LevelManager.Instance.orderItems.Values.ElementAt(i).toyIcon;
             //imagePoints[i].points[i].sprite = OrderedImage[i].sprite;
             OrderedImage[i].DOFade(0, 0);
             OrderedImage[i].DOFade(1, 2);

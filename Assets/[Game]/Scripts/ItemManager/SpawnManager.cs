@@ -10,9 +10,9 @@ public class SpawnManager : Singleton<SpawnManager>
     
    private void SpawnToy()
     {
-        for (int i = 0; i < ItemLevelManager.Instance.activePool.Count; i++)
+        for (int i = 0; i < LevelManager.Instance.levelItems.Count; i++)
         {
-            Instantiate(ItemLevelManager.Instance.activePool.Values.ElementAt(i).itemPrefab.gameObject, pos, Quaternion.identity);
+            Instantiate(LevelManager.Instance.levelItems.Values.ElementAt(i).itemPrefab.gameObject, pos, Quaternion.identity);
         }
     }
 
@@ -26,8 +26,8 @@ public class SpawnManager : Singleton<SpawnManager>
         while (true)
         {
             Vector3 posR = new Vector3(Random.Range(-2.1f, -0.8f), 0f, -1.472f);
-            int random = Random.Range(0, ItemLevelManager.Instance.activePool.Count);
-            Instantiate(ItemLevelManager.Instance.activePool.Values.ElementAt(random).itemPrefab.gameObject, posR, Quaternion.identity);
+            int random = Random.Range(0, LevelManager.Instance.levelItems.Count);
+            Instantiate(LevelManager.Instance.levelItems.Values.ElementAt(random).itemPrefab.gameObject, posR, Quaternion.identity);
             yield return new WaitForSeconds(2);
         }
     }
