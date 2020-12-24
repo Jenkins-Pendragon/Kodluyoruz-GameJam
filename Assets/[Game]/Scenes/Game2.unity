@@ -870,53 +870,6 @@ Transform:
   m_Father: {fileID: 717498571}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2024216365
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2024216367}
-  - component: {fileID: 2024216366}
-  m_Layer: 0
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2024216366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024216365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0e66024daa18f848a87d6c1ab7048ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow: {fileID: 45445686124063371, guid: 8a81abacd0ab19340b66718e934b47a6, type: 3}
-  pathCreator: {fileID: 5672326110804763820}
-  frequency: 8
-  speed: 0.5
---- !u!4 &2024216367
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024216365}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5385446243487762
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1708,7 +1661,7 @@ Transform:
   - {fileID: 5109273225929258865}
   - {fileID: 2753887268241568335}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2390158821458090367
 MeshRenderer:
@@ -1977,7 +1930,7 @@ Transform:
   - {fileID: 5545680779236048383}
   - {fileID: 3181294257646106817}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -53.22}
 --- !u!4 &3181294257646106817
 Transform:
@@ -2398,7 +2351,7 @@ Transform:
   - {fileID: 6607506236747203338}
   - {fileID: 4279157310671144500}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &4559039975115561874
 MeshRenderer:
@@ -2472,7 +2425,7 @@ Transform:
   - {fileID: 2821959426257997947}
   - {fileID: 5186334953411138885}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1 &4691356057319008612
 GameObject:
@@ -3474,7 +3427,7 @@ Transform:
   - {fileID: 90910298}
   - {fileID: 29775141}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6639728693714796977
 GameObject:
@@ -3486,6 +3439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6639728693714796976}
   - component: {fileID: 6639728693714796978}
+  - component: {fileID: 6639728693714796979}
   m_Layer: 0
   m_Name: ConveyorBeltWithArrows(Bounds)
   m_TagString: ConveyorBelt
@@ -3506,6 +3460,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.1003637, y: 1, z: 6.953354}
   m_Center: {x: -0.10438681, y: -1.46, z: 2.380869}
+--- !u!114 &6639728693714796979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639728693714796977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e66024daa18f848a87d6c1ab7048ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 45445686124063371, guid: 8a81abacd0ab19340b66718e934b47a6, type: 3}
+  pathCreator: {fileID: 5672326110804763820}
+  frequency: 8
+  speed: 0.5
 --- !u!4 &6639728693803972017
 Transform:
   m_ObjectHideFlags: 0
@@ -3805,7 +3775,7 @@ Transform:
   - {fileID: 235653470}
   - {fileID: 675261068}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7001335257876908184
 MeshFilter:
