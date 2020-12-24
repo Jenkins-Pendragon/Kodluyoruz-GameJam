@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEditor.SceneManagement;
 
 
+
 [InitializeOnLoad]
 public class LevelFix
 {    
