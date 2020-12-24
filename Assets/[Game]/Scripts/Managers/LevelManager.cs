@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class ItemLevelManager : Singleton<ItemLevelManager>
+public class LevelManager : Singleton<LevelManager>
 {
     public List<Level> myAllLevels = new List<Level>();
     private ItemDataBase toyDatabase;
