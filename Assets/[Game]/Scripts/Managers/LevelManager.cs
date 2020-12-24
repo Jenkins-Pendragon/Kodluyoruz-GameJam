@@ -13,7 +13,7 @@ public class LevelManager : Singleton<LevelManager>
     private void OnEnable()
     {
         currentLevel = PlayerPrefs.GetInt("Level");
-        activePool = ItemDataBase.Instance.CreateLevelToys(myAllLevels[currentLevel].poolCount); // 5
+        activePool = OrderManager.Instance.SelectLevelItems(myAllLevels[currentLevel].poolCount); // 5
         /*
         for (int i = 0; i < activePool.Count; i++)
         {
@@ -24,7 +24,7 @@ public class LevelManager : Singleton<LevelManager>
     }
     public void NewOrder()
     {
-        activeOrder = ItemDataBase.Instance.GenerateOrder(myAllLevels[currentLevel].spawnedCount, activePool); // 2        
+        activeOrder = OrderManager.Instance.GenerateOrder(myAllLevels[currentLevel].spawnedCount, activePool); // 2        
     }
     public void LevelUp()
     {

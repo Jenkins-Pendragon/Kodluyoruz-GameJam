@@ -730,17 +730,17 @@ PrefabInstance:
     - target: {fileID: 5424511868698667503, guid: e6e598dec7e2a80428f62be7baefdd97,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.377
+      value: -1.349
       objectReference: {fileID: 0}
     - target: {fileID: 5424511868698667503, guid: e6e598dec7e2a80428f62be7baefdd97,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.233
+      value: 1.023
       objectReference: {fileID: 0}
     - target: {fileID: 5424511868698667503, guid: e6e598dec7e2a80428f62be7baefdd97,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 5424511868698667503, guid: e6e598dec7e2a80428f62be7baefdd97,
         type: 3}
@@ -1003,7 +1003,7 @@ PrefabInstance:
     - target: {fileID: 7677776109014231598, guid: 163b3225a171bc54eb56c9795eff7570,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 7677776109014231598, guid: 163b3225a171bc54eb56c9795eff7570,
         type: 3}
@@ -1013,7 +1013,7 @@ PrefabInstance:
     - target: {fileID: 7677776109014231598, guid: 163b3225a171bc54eb56c9795eff7570,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7677776109014231598, guid: 163b3225a171bc54eb56c9795eff7570,
         type: 3}
@@ -1313,12 +1313,12 @@ PrefabInstance:
     - target: {fileID: 3672397729056187077, guid: d7480d43a0f98794e83f7362318ee906,
         type: 3}
       propertyPath: m_Size.x
-      value: 5.155284
+      value: 5.302223
       objectReference: {fileID: 0}
     - target: {fileID: 3672397729056187077, guid: d7480d43a0f98794e83f7362318ee906,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.07692671
+      value: -0.0034569502
       objectReference: {fileID: 0}
     - target: {fileID: 3672397729056187078, guid: d7480d43a0f98794e83f7362318ee906,
         type: 3}
