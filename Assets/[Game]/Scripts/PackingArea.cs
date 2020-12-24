@@ -28,6 +28,7 @@ public class PackingArea : MonoBehaviour
             isColliding = true;            
             PackItem(other.gameObject);
             ResetItem(other.gameObject);
+            ItemLevelManager.Instance.activeOrder.Remove(item.itemID);
         }
     }
 
@@ -57,7 +58,12 @@ public class PackingArea : MonoBehaviour
         */
 
         go.transform.DOJump(jumpPoint.position, 1.75f, 1, 0.5f);
-;    }
+        Sequence seq = DOTween.Sequence();
+        seq.Append(go.transform.DOScale(Vector3.one * 0.5f, 0.25f));
+        seq.Append(go.transform.DOScale(Vector3.one * 0.3f, 0.25f));
+        
+
+    }
 
     private void ResetItem(GameObject go) 
     {
