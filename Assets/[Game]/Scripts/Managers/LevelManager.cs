@@ -7,8 +7,8 @@ public class LevelManager : Singleton<LevelManager>
 {
     public LevelData LevelData;
     public Level CurrentLevel { get { return (LevelData.Levels[LevelIndex]); } }
-    public Dictionary<string, Item> levelItems;
-    public Dictionary<string, Item> orderItems;    
+    public Dictionary<string, Item> levelItems = new Dictionary<string, Item>();
+    public Dictionary<string, Item> orderItems = new Dictionary<string, Item>();
 
     public int LevelIndex
     {
