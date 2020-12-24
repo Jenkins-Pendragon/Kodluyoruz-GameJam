@@ -16,8 +16,6 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseDown()
     {
-        //transform.DOKill();
-        //transform.DOScale(Vector3.one * 0.5f, rotationDelay);
         rb.isKinematic = true;
         item.isPackable = false;
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
@@ -26,8 +24,6 @@ public class DragAndDrop : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        //transform.DOKill();
-        //transform.DOScale(Vector3.one * 0.3f, 0.7f);
         rb.isKinematic = false;
         item.isPackable = true;
     }

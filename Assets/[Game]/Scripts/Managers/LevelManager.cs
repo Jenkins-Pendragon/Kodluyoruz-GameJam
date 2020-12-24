@@ -37,7 +37,8 @@ public class LevelManager : Singleton<LevelManager>
     }
     public void NewOrder()
     {        
-        orderItems = OrderManager.Instance.GenerateOrder(CurrentLevel.orderItemSize, levelItems);      
+        orderItems = OrderManager.Instance.GenerateOrder(CurrentLevel.orderItemSize, levelItems);
+        Debug.Log("BreakPoint");
     }    
 }
 
