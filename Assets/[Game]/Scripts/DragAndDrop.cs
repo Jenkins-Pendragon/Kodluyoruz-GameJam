@@ -6,22 +6,26 @@ public class DragAndDrop : MonoBehaviour
     private Vector3 mOffest;
     private float mZCoord;
     private Rigidbody rb;
+    private Item item;
     private readonly float rotationDelay = 0.3f;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        item = GetComponent<Item>();
     }
 
     private void OnMouseDown()
     {
         rb.isKinematic = true;
+        item.isPackable = false;
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        mOffest = gameObject.transform.position + Vector3.up - GetMouseWorldPos();
+        mOffest = gameObject.transform.position + Vector3.up*2f - GetMouseWorldPos();
         ResetRotation();
     }
     private void OnMouseUp()
     {
         rb.isKinematic = false;
+        item.isPackable = true;
     }
     private Vector3 GetMouseWorldPos()
     {
