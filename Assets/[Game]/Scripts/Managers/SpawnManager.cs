@@ -6,8 +6,9 @@ using System.Linq;
 public class SpawnManager : MonoBehaviour
 {
 
-    public Transform SpawnLeft;
-    public Transform SpawnRight;
+    public Transform spawnLeft;
+    public Transform spawnRight;
+    public Transform spawnRotation;
 
     private void OnEnable()
     {
@@ -28,12 +29,12 @@ public class SpawnManager : MonoBehaviour
     {
         while (true)
         {           
-            Vector3 randomPos = new Vector3(Random.Range(SpawnLeft.position.x, SpawnRight.position.x),
-                SpawnLeft.position.y + Random.Range(0.5f,1f),
-                Random.Range(SpawnLeft.position.z, SpawnRight.position.z));
+            Vector3 randomPos = new Vector3(Random.Range(spawnLeft.position.x, spawnRight.position.x),
+                spawnLeft.position.y + Random.Range(0.5f,1f),
+                Random.Range(spawnLeft.position.z, spawnRight.position.z));
 
             int random = Random.Range(0, LevelManager.Instance.levelItems.Count);
-            Instantiate(LevelManager.Instance.levelItems.Values.ElementAt(random).itemPrefab.gameObject, randomPos, Quaternion.identity);
+            Instantiate(LevelManager.Instance.levelItems.Values.ElementAt(random).itemPrefab.gameObject, randomPos, spawnRotation.rotation);
             yield return new WaitForSeconds(LevelManager.Instance.CurrentLevel.spawnDelay);
         }
     }
