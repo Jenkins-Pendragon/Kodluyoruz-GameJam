@@ -24,4 +24,12 @@ public class GameManager : Singleton<GameManager>
         IsGameStarted = false;
         EventManager.OnGameEnd.Invoke();
     }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartGame();
+        }
+    }
 }
