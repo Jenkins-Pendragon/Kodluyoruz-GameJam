@@ -14,10 +14,18 @@ public class ShowOrderUI : MonoBehaviour
     public List<Image> Size3Images = new List<Image>();
     public List<Image> Size4Images = new List<Image>();
     public List<GameObject> imageParents = new List<GameObject>();
-    
 
 
-    
+    private void OnEnable()
+    {
+        EventManager.OnOrderGenerated.AddListener(ShowOrderIcon);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnOrderGenerated.RemoveListener(ShowOrderIcon);
+    }
+
 
     public void ShowOrderIcon()
     {

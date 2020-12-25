@@ -29,20 +29,25 @@ public class LevelManager : Singleton<LevelManager>
 
     private void OnEnable()
     {
-        SetLevelItems();
-        NewOrder();
+        EventManager.OnGameStarted.AddListener(SetLevelItems);
+        EventManager.OnLevelStarted.AddListener(NewOrder);        
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnGameStarted.RemoveListener(SetLevelItems);
+        EventManager.OnLevelStarted.RemoveListener(NewOrder);
     }
 
     private void SetLevelItems() 
     {
         levelItems = OrderManager.Instance.SelectLevelItems(CurrentLevel.levelItemSize);
+        EventManager.OnLevelStarted.Invoke();
     }
     public void NewOrder()
     {
         orderItems = OrderManager.Instance.GenerateOrder(CurrentLevel.orderItemSize, levelItems);
-        var showorderui = FindObjectOfType<ShowOrderUI>();
-        if (showorderui != null)
-            showorderui.ShowOrderIcon();
+        EventManager.OnOrderGenerated.Invoke();        
     }
 
     private void Update()
