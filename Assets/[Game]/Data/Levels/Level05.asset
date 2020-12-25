@@ -15,3 +15,6 @@ MonoBehaviour:
   orderItemSize: 2
   levelItemSize: 10
   conveyorBeltSpeed: 0.5
+  spawnDelay: 1.5
+  defaultItemScale: 0.3
+  maxItemScale: 0.5

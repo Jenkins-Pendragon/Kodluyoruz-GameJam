@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Level01
   m_EditorClassIdentifier: 
   orderItemSize: 4
-  levelItemSize: 8
+  levelItemSize: 10
   conveyorBeltSpeed: 1
-  spawnRate: 1
+  spawnDelay: 1.5
+  defaultItemScale: 0.3
+  maxItemScale: 0.5
