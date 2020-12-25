@@ -10,11 +10,7 @@ public class Level: ScriptableObject
     public int levelItemSize;
     public float conveyorBeltSpeed;
     [Range(1f, 10f)]
-    public float spawnRate;
-    public Level(int _orderItemSize, int _levelItemSize, int _conveyorBeltSpeed)
-    {
-        this.orderItemSize = _orderItemSize;
-        this.levelItemSize = _levelItemSize;
-        this.conveyorBeltSpeed = _conveyorBeltSpeed;
-    }
+    public float spawnDelay;
+    public float defaultItemScale;
+    public float maxItemScale;    
 }

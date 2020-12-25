@@ -9,5 +9,5 @@ public class Item : MonoBehaviour
     public Sprite toyIcon;
     public GameObject itemPrefab;
     [HideInInspector]
-    public bool isPackable = true;
+    public bool isPackable = true;    
 }

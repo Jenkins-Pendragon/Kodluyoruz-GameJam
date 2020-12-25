@@ -8,6 +8,31 @@ public class DragAndDrop : MonoBehaviour
     private Rigidbody rb;
     private Item item;
     private readonly float rotationDelay = 0.3f;
+    private float defaultItemScale;
+    private float maxItemScale;
+    private float DefaultItemScale
+    {
+        get
+        { 
+            if(defaultItemScale == 0) 
+            {
+                defaultItemScale = LevelManager.Instance.CurrentLevel.defaultItemScale;
+            }
+            return defaultItemScale;
+        } 
+    }
+    private float MaxItemScale
+    {
+        get
+        {
+            if (maxItemScale == 0)
+            {
+                maxItemScale = LevelManager.Instance.CurrentLevel.maxItemScale;
+            }
+            return maxItemScale;
+        }
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -17,17 +42,17 @@ public class DragAndDrop : MonoBehaviour
     private void OnMouseDown()
     {
         transform.DOKill();
-        transform.DOScale(Vector3.one * 0.5f, rotationDelay);
+        transform.DOScale(Vector3.one * MaxItemScale, rotationDelay);
         rb.isKinematic = true;
         item.isPackable = false;
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        mOffest = gameObject.transform.position + Vector3.up * 2f - GetMouseWorldPos();
+        mOffest = gameObject.transform.position + Vector3.up * 1.75f - GetMouseWorldPos();
         ResetRotation();
     }
     private void OnMouseUp()
     {
         transform.DOKill();
-        transform.DOScale(Vector3.one * 0.3f, 0.7f);
+        transform.DOScale(Vector3.one * DefaultItemScale, 0.7f);
         rb.isKinematic = false;
         item.isPackable = true;
     }

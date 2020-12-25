@@ -29,12 +29,12 @@ public class SpawnManager : MonoBehaviour
         while (true)
         {           
             Vector3 randomPos = new Vector3(Random.Range(SpawnLeft.position.x, SpawnRight.position.x),
-                SpawnLeft.position.y + Random.Range(0.5f,1.5f),
+                SpawnLeft.position.y + Random.Range(0.5f,1f),
                 Random.Range(SpawnLeft.position.z, SpawnRight.position.z));
 
             int random = Random.Range(0, LevelManager.Instance.levelItems.Count);
             Instantiate(LevelManager.Instance.levelItems.Values.ElementAt(random).itemPrefab.gameObject, randomPos, Quaternion.identity);
-            yield return new WaitForSeconds(LevelManager.Instance.CurrentLevel.spawnRate);
+            yield return new WaitForSeconds(LevelManager.Instance.CurrentLevel.spawnDelay);
         }
     }
 }
