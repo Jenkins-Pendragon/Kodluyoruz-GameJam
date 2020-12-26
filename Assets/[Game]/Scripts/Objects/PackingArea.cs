@@ -15,6 +15,33 @@ public class PackingArea : MonoBehaviour
     private List<GameObject> packedItems = new List<GameObject>();
     private bool isColliding;
 
+    #region Perspective Camera Simulation
+    private float defaultItemScale;
+    private float maxItemScale;
+    private float DefaultItemScale
+    {
+        get
+        {
+            if (defaultItemScale == 0)
+            {
+                defaultItemScale = LevelManager.Instance.CurrentLevel.defaultItemScale;
+            }
+            return defaultItemScale;
+        }
+    }
+    private float MaxItemScale
+    {
+        get
+        {
+            if (maxItemScale == 0)
+            {
+                maxItemScale = LevelManager.Instance.CurrentLevel.maxItemScale;
+            }
+            return maxItemScale;
+        }
+    }
+    #endregion
+
     private void OnTriggerEnter(Collider other)
     {
         if (isColliding) return;
@@ -23,7 +50,7 @@ public class PackingArea : MonoBehaviour
         if (item != null && item.isPackable)
         {
             //Check if the item ordered
-            if (!LevelManager.Instance.orderItems.ContainsKey(item.itemID) || packedItems.Find(go => go.GetComponent<Item>().itemID == item.itemID) != null)
+            if (!LevelManager.Instance.orderItems.ContainsKey(item.itemID))
             {
                 WrongItem(other.gameObject);
                 return;
@@ -32,6 +59,11 @@ public class PackingArea : MonoBehaviour
             isColliding = true;
             PackItem(other.gameObject);
             DisableItem(other.gameObject);
+            LevelManager.Instance.orderItems.Remove(item.itemID);
+            if (LevelManager.Instance.orderItems.Count == 0)
+            {
+                EventManager.OnOrderCompleted.Invoke();
+            }
         }
     }
 
@@ -62,8 +94,8 @@ public class PackingArea : MonoBehaviour
         go.transform.DOJump(jumpPoint.position, 1.75f, 1, 0.5f);
 
         Sequence seq = DOTween.Sequence();
-        seq.Append(go.transform.DOScale(Vector3.one * 0.5f, 0.25f));
-        seq.Append(go.transform.DOScale(Vector3.one * 0.3f, 0.25f));
+        seq.Append(go.transform.DOScale(Vector3.one * MaxItemScale, 0.25f));
+        seq.Append(go.transform.DOScale(Vector3.one * DefaultItemScale, 0.25f));
     }
 
     private void DisableItem(GameObject go)

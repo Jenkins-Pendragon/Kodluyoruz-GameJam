@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.052517176, y: 0.6320375, z: 3.79}
-  m_Center: {x: -0.3635016, y: -0.12252307, z: 0}
+  m_Size: {x: 0.052517176, y: 0.6320375, z: 5.5901365}
+  m_Center: {x: -0.3635016, y: -0.12252307, z: -1.012723}
 --- !u!1 &956277732
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,8 +118,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04091984, y: 0.68499863, z: 3.79}
-  m_Center: {x: -0.40022013, y: -0.025953174, z: 0}
+  m_Size: {x: 0.04091984, y: 0.68499863, z: 5.65851}
+  m_Center: {x: -0.40022013, y: -0.025953174, z: -1.0380139}
 --- !u!1 &185128809686395162
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,8 +262,8 @@ MonoBehaviour:
   editorData:
     _bezierPath:
       points:
-      - {x: 0, y: 0, z: 0}
-      - {x: 0, y: 0, z: 1.0546994}
+      - {x: 0, y: 0, z: -1}
+      - {x: 0, y: 0, z: 0.05469942}
       - {x: 0, y: 0, z: 3.1453004}
       - {x: 0, y: 0, z: 4.2}
       - {x: 0, y: 0, z: 5.077547}
@@ -273,8 +273,8 @@ MonoBehaviour:
       - {x: 2.993219, y: 0.03722906, z: 5.0413365}
       - {x: 3, y: 0, z: 4.2}
       - {x: 3.015109, y: -0.082951024, z: 2.3253958}
-      - {x: 2.9942193, y: 0, z: 1.4038053}
-      - {x: 3, y: 0, z: 0}
+      - {x: 2.9942193, y: 0, z: 0.40380526}
+      - {x: 3, y: 0, z: -1}
       isClosed: 0
       space: 0
       controlMode: 0
@@ -390,8 +390,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.302223, y: 1, z: 7.056032}
-  m_Center: {x: -0.0034569502, y: -1.46, z: 2.432208}
+  m_Size: {x: 5.302223, y: 1, z: 8.13933}
+  m_Center: {x: -0.0034570694, y: -1.46, z: 1.8905592}
 --- !u!114 &3672397729056187076
 MonoBehaviour:
   m_ObjectHideFlags: 0
