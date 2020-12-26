@@ -12,5 +12,6 @@ public class Level: ScriptableObject
     [Range(1f, 10f)]
     public float spawnDelay;
     public float defaultItemScale;
-    public float maxItemScale;    
+    public float maxItemScale;
+    public float happinessTotal;
 }

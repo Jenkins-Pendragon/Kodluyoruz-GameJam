@@ -18,3 +18,4 @@ MonoBehaviour:
   spawnDelay: 1.5
   defaultItemScale: 0.3
   maxItemScale: 0.5
+  happinessTotal: 100

@@ -2010,7 +2010,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.735
+  m_FillAmount: 0.362
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -2229,7 +2229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d87ffa550672c48b203b60fe174b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.7
   rb: {fileID: 1458092413}
   direction: {x: 0, y: 0, z: 1}
 --- !u!54 &1458092413
@@ -4055,7 +4054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d87ffa550672c48b203b60fe174b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
   rb: {fileID: 5808817606247654304}
   direction: {x: -1, y: 0, z: 0}
 --- !u!114 &2978917263539537940
@@ -4070,7 +4068,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d87ffa550672c48b203b60fe174b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.7
   rb: {fileID: 6862607409325661125}
   direction: {x: -1, y: 0, z: 0}
 --- !u!4 &3616649816232981844
@@ -4221,7 +4218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69535d03251ff2e4ba9f2bfc541bbfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -20
   rb: {fileID: 3994244673102151555}
 --- !u!54 &3994244673102151555
 Rigidbody:
@@ -4351,7 +4347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d87ffa550672c48b203b60fe174b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
   rb: {fileID: 3994244673843959670}
   direction: {x: 0, y: 0, z: 1}
 --- !u!54 &3994244673843959670
@@ -4446,7 +4441,6 @@ MonoBehaviour:
   arrow: {fileID: 45445686124063371, guid: 8a81abacd0ab19340b66718e934b47a6, type: 3}
   pathCreator: {fileID: 2734600610407024239}
   frequency: 8
-  speed: 0.5
 --- !u!114 &3994244673951331620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4459,7 +4453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69535d03251ff2e4ba9f2bfc541bbfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -20
   rb: {fileID: 3994244673951331621}
 --- !u!54 &3994244673951331621
 Rigidbody:
@@ -4574,7 +4567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69535d03251ff2e4ba9f2bfc541bbfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -45
   rb: {fileID: 4093659482542935360}
 --- !u!4 &4093659482542935363
 Transform:
@@ -4655,7 +4647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69535d03251ff2e4ba9f2bfc541bbfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -45
   rb: {fileID: 4093659482780010470}
 --- !u!4 &4093659482780010489
 Transform:
@@ -4946,7 +4937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d87ffa550672c48b203b60fe174b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.7
   rb: {fileID: 6966689713249921324}
   direction: {x: 0, y: 0, z: -1}
 --- !u!4 &7225047092210535412
@@ -5024,7 +5014,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d87ffa550672c48b203b60fe174b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
   rb: {fileID: 8002710309969973577}
   direction: {x: 0, y: 0, z: -1}
 --- !u!54 &8002710309969973577

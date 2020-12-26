@@ -65,7 +65,12 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        transform.position = GetMouseWorldPos() + mOffest;
+        
+        Vector3 pos = GetMouseWorldPos() + mOffest;
+        pos.y = transform.position.y + 1.75f;
+        transform.position = pos;
+        
+        //transform.position = GetMouseWorldPos() + mOffest;
     }
 
     private void ResetRotation()

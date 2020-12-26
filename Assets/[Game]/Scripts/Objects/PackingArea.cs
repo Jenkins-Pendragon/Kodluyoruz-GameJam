@@ -63,7 +63,7 @@ public class PackingArea : MonoBehaviour
             LevelManager.Instance.orderItems.Remove(item.itemID);
             if (LevelManager.Instance.orderItems.Count == 0)
             {
-                EventManager.OnOrderCompleted.Invoke();
+                EventManager.OnOrderDelivered.Invoke();
             }
         }
     }
@@ -94,9 +94,11 @@ public class PackingArea : MonoBehaviour
         go.transform.DORotate(new Vector3(0, 90f, 0f), 0.5f);
         go.transform.DOJump(jumpPoint.position, 1.75f, 1, 0.5f);
 
+        
         Sequence seq = DOTween.Sequence();
         seq.Append(go.transform.DOScale(Vector3.one * MaxItemScale, 0.25f));
         seq.Append(go.transform.DOScale(Vector3.one * DefaultItemScale, 0.25f));
+        
     }
 
     private void DisableItem(GameObject go)

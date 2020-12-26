@@ -2,35 +2,71 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class HappinessBarController : MonoBehaviour
 {
 
-    [SerializeField] private Image happinessBarImage;
-    [SerializeField] private Image happinessBarOutImage;
-    [SerializeField] private int happinessAmount;
-    private int happinessTotal = 100; 
+    public Image happinessBarImage;
+    public Image happinessBarOutImage;
+    public float happinessAmount; //Check To Do
+
+    private float happinessTotal = 0;
+    private float HappinessTotal 
+    { 
+        get 
+        { 
+            if(happinessTotal == 0) 
+            {
+                happinessTotal = LevelManager.Instance.CurrentLevel.happinessTotal;
+            }
+            return happinessTotal;
+        } 
+    }
     private float targetHappiness, currentHappiness=10f;
+
+    private void OnEnable()
+    {
+        EventManager.OnOrderDelivered.AddListener(IncreaseHappiness);
+        EventManager.OnOrderFailed.AddListener(DecreaseHappiness);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnOrderDelivered.RemoveListener(IncreaseHappiness);
+        EventManager.OnOrderFailed.RemoveListener(DecreaseHappiness);
+    }
 
     private void Start()
     {
         UpdateHappinesBar();
     }
-    public void IncreaseHappinessButton()
+
+    public void IncreaseHappiness() 
     {
-        StartCoroutine(IncreaseHappiness());
+        currentHappiness += happinessAmount;
+        UpdateHappinesBar();
+        if (currentHappiness>= HappinessTotal)
+        {
+            EventManager.OnLevelSuccesed.Invoke();
+        }
+        else
+        {
+            
+        }
     }
-    public void DecreaseHappinessButton()
+
+    public void DecreaseHappiness() 
     {
-        StartCoroutine(DecreaseHappiness());
+        StartCoroutine(DecreaseHappinessCo());
     }
-    IEnumerator IncreaseHappiness()
+    IEnumerator IncreaseHappinessCo()
     {
         targetHappiness = currentHappiness + happinessAmount;
         while (currentHappiness < targetHappiness)
         {
             currentHappiness+=0.5f;
-            if (currentHappiness>=100)
+            if (currentHappiness>= HappinessTotal)
             {
                 currentHappiness = 100;
             }
@@ -39,7 +75,7 @@ public class HappinessBarController : MonoBehaviour
         }
 
     }
-    IEnumerator DecreaseHappiness()
+    IEnumerator DecreaseHappinessCo()
     {
         targetHappiness = currentHappiness - happinessAmount;
         while (currentHappiness > targetHappiness)
@@ -54,17 +90,14 @@ public class HappinessBarController : MonoBehaviour
         }
 
     }
+    
     private void UpdateHappinesBar()
-    {
-        float ratio = currentHappiness / happinessTotal;
-        happinessBarImage.fillAmount = ratio;
-        if (ratio>=1)
-        {
-            happinessBarImage.color = Color.green;
-        }
-        else if (ratio<=0)
-        {
-            happinessBarOutImage.color = Color.red;
-        }
+    {        
+        float ratio = currentHappiness / HappinessTotal;
+        DOTween.To(() => happinessBarImage.fillAmount, (a) => happinessBarImage.fillAmount = a, ratio, 2f).
+            OnComplete(()=> {
+                if (ratio >= 1) happinessBarImage.color = Color.green;               
+                else if (ratio <= 0) happinessBarOutImage.color = Color.red;                
+            });
     }
 }

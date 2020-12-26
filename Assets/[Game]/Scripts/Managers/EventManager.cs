@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public static class EventManager 
 {
 
-    public static UnityEvent OnOrderCompleted = new UnityEvent();
+    public static UnityEvent OnOrderDelivered = new UnityEvent();
     public static UnityEvent OnOrderFailed = new UnityEvent();
 
     public static UnityEvent OnGameStarted = new UnityEvent();
@@ -22,4 +22,11 @@ public static class EventManager
     public static UnityEvent OnLevelFailed= new UnityEvent();
 
     public static UnityEvent OnItemPacked = new UnityEvent();
+}
+
+public class ToDo 
+{
+    //HappinessBar datalarını level dataya taşı
+    //DragAndDrop scriptini düzenle
+
 }

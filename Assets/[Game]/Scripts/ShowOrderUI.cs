@@ -8,13 +8,11 @@ using System;
 
 public class ShowOrderUI : MonoBehaviour
 {
-
     public List<Image> Size1Images = new List<Image>();
     public List<Image> Size2Images = new List<Image>();
     public List<Image> Size3Images = new List<Image>();
     public List<Image> Size4Images = new List<Image>();
     public List<GameObject> imageParents = new List<GameObject>();
-
 
     private void OnEnable()
     {
