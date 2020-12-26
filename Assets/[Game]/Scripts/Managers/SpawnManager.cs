@@ -33,8 +33,8 @@ public class SpawnManager : MonoBehaviour
                 spawnLeft.position.y + Random.Range(0.5f,1f),
                 Random.Range(spawnLeft.position.z, spawnRight.position.z));
 
-            int random = Random.Range(0, LevelManager.Instance.levelItems.Count);
-            Instantiate(LevelManager.Instance.levelItems.Values.ElementAt(random).itemPrefab.gameObject, randomPos, spawnRotation.rotation);
+            int random = Random.Range(0, OrderManager.Instance.levelItems.Count);
+            Instantiate(OrderManager.Instance.levelItems.Values.ElementAt(random).itemPrefab.gameObject, randomPos, spawnRotation.rotation);
             yield return new WaitForSeconds(LevelManager.Instance.CurrentLevel.spawnDelay);
         }
     }

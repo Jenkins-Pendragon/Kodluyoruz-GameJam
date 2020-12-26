@@ -6,13 +6,8 @@ using System.Linq;
 public class LevelManager : Singleton<LevelManager>
 {
     public LevelData LevelData;
-    public Level CurrentLevel { get { return (LevelData.Levels[LevelIndex]); } }
-
-    public Dictionary<string, Item> levelItems = new Dictionary<string, Item>();
-    public Dictionary<string, Item> orderItems = new Dictionary<string, Item>();
+    public Level CurrentLevel { get { return (LevelData.Levels[LevelIndex]); } }   
     
-
-
     public int LevelIndex
     {
         get
@@ -28,30 +23,9 @@ public class LevelManager : Singleton<LevelManager>
         }
     }
 
-    private void OnEnable()
-    {
-        EventManager.OnGameStarted.AddListener(SetLevelItems);
-        EventManager.OnLevelStarted.AddListener(NewOrder);
-        EventManager.OnOrderDelivered.AddListener(NewOrder);
-    }
+    
 
-    private void OnDisable()
-    {
-        EventManager.OnGameStarted.RemoveListener(SetLevelItems);
-        EventManager.OnLevelStarted.RemoveListener(NewOrder);
-         EventManager.OnOrderDelivered.AddListener(NewOrder);
-    }
-
-    private void SetLevelItems() 
-    {
-        levelItems = OrderManager.Instance.SelectLevelItems(CurrentLevel.levelItemSize);
-        EventManager.OnLevelStarted.Invoke();
-    }
-    public void NewOrder()
-    {
-        orderItems = OrderManager.Instance.GenerateOrder(CurrentLevel.orderItemSize, levelItems);
-        EventManager.OnOrderGenerated.Invoke();        
-    }
+    
   
 }
 

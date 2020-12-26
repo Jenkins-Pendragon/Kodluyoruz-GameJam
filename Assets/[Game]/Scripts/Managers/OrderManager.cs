@@ -38,6 +38,36 @@ public class OrderManager : Singleton<OrderManager>
         }
         return orderItems;
     }
+    public Dictionary<string, Item> orderItems = new Dictionary<string, Item>();
+    public Dictionary<string, Item> levelItems = new Dictionary<string, Item>();
+
+    private void OnEnable()
+    {
+        EventManager.OnGameStarted.AddListener(SetLevelItems);
+        EventManager.OnLevelStarted.AddListener(NewOrder);
+        EventManager.OnOrderDelivered.AddListener(NewOrder);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnGameStarted.RemoveListener(SetLevelItems);
+        EventManager.OnLevelStarted.RemoveListener(NewOrder);
+        EventManager.OnOrderDelivered.AddListener(NewOrder);
+    }
+
+    public void NewOrder()
+    {
+        orderItems = GenerateOrder(LevelManager.Instance.CurrentLevel.orderItemSize, levelItems);
+        EventManager.OnOrderGenerated.Invoke();
+    }
+
+    private void SetLevelItems()
+    {
+        levelItems = SelectLevelItems(LevelManager.Instance.CurrentLevel.levelItemSize);
+        EventManager.OnLevelStarted.Invoke();
+    }
 
 
+    
+    
 }

@@ -51,7 +51,7 @@ public class PackingArea : MonoBehaviour
         {
             //Check if the item ordered
             //|| packedItems.Find(go => go.GetComponent<Item>().itemID == item.itemID) != null)
-            if (!LevelManager.Instance.orderItems.ContainsKey(item.itemID))
+            if (!OrderManager.Instance.orderItems.ContainsKey(item.itemID))
             {
                 WrongItem(other.gameObject);
                 return;
@@ -60,8 +60,8 @@ public class PackingArea : MonoBehaviour
             isColliding = true;
             PackItem(other.gameObject);
             DisableItem(other.gameObject);
-            LevelManager.Instance.orderItems.Remove(item.itemID);
-            if (LevelManager.Instance.orderItems.Count == 0)
+            OrderManager.Instance.orderItems.Remove(item.itemID);
+            if (OrderManager.Instance.orderItems.Count == 0)
             {
                 EventManager.OnOrderDelivered.Invoke();
             }
