@@ -30,13 +30,15 @@ public class LevelManager : Singleton<LevelManager>
     private void OnEnable()
     {
         EventManager.OnGameStarted.AddListener(SetLevelItems);
-        EventManager.OnLevelStarted.AddListener(NewOrder);        
+        EventManager.OnLevelStarted.AddListener(NewOrder);
+        EventManager.OnOrderCompleted.AddListener(NewOrder);
     }
 
     private void OnDisable()
     {
         EventManager.OnGameStarted.RemoveListener(SetLevelItems);
         EventManager.OnLevelStarted.RemoveListener(NewOrder);
+        EventManager.OnOrderCompleted.RemoveListener(NewOrder);
     }
 
     private void SetLevelItems() 

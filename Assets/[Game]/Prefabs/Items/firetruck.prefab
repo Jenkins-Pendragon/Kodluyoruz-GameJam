@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1207144543774512353}
   - component: {fileID: 2027853418221569700}
   - component: {fileID: 563545293081589459}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2086891783216607108}
   - component: {fileID: 6957732138425906537}
   - component: {fileID: 2713988705671754642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: firetruck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 5373897448202010910}
   - component: {fileID: 3008832796703617609}
   - component: {fileID: 571357168894338312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 4529343234922224158}
   - component: {fileID: 3148332244945732295}
   - component: {fileID: 7293307432329201053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 5353501415073888825}
   - component: {fileID: 1946326474844706114}
   - component: {fileID: 4987316915348380557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 1007542037275240927}
   - component: {fileID: 8064222752337208589}
   - component: {fileID: 1506115168969115975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 8075146124980392415}
   - component: {fileID: 5371527878775216717}
   - component: {fileID: 4294937794566129983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}

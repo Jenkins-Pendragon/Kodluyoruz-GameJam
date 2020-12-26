@@ -50,6 +50,7 @@ public class PackingArea : MonoBehaviour
         if (item != null && item.isPackable)
         {
             //Check if the item ordered
+            //|| packedItems.Find(go => go.GetComponent<Item>().itemID == item.itemID) != null)
             if (!LevelManager.Instance.orderItems.ContainsKey(item.itemID))
             {
                 WrongItem(other.gameObject);

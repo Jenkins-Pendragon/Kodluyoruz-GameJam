@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7292652643705890061}
   - component: {fileID: 8885830493323928917}
   - component: {fileID: 4693471261534201106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ambulance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 1563774248439273600}
   - component: {fileID: 1826040346903300805}
   - component: {fileID: 189461798664272562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 8052029832116274351}
   - component: {fileID: 6329302104137880703}
   - component: {fileID: 7586998184453160795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: doorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 4298811572517656191}
   - component: {fileID: 3369282455734144678}
   - component: {fileID: 6936686377122236924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 5708438806460167768}
   - component: {fileID: 2193739450169022755}
   - component: {fileID: 4631254827185756140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 8755326849861502474}
   - component: {fileID: 6878906891128886719}
   - component: {fileID: 4652976080251992980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: doorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 8458790790209953214}
   - component: {fileID: 5762505053807728172}
   - component: {fileID: 4533340175632745822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 614888481210705342}
   - component: {fileID: 7681689781443881324}
   - component: {fileID: 1267143384793875750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3219732790207635706}
   - component: {fileID: 1600439579747674984}
   - component: {fileID: 7432285596377643034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 5856339027002956026}
   - component: {fileID: 3699628658898129960}
   - component: {fileID: 5213106441232037986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 7449213236175592646}
   - component: {fileID: 2261497743856164895}
   - component: {fileID: 1301454195924438740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: garbageTruck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 5512059481991669188}
   - component: {fileID: 4655040331152914305}
   - component: {fileID: 6587774500726392822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 5589353020441082586}
   - component: {fileID: 1113363351953301613}
   - component: {fileID: 6212670379047565967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 1654248608751635228}
   - component: {fileID: 5169247170718229607}
   - component: {fileID: 1839972491787233960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 7090093910098144059}
   - component: {fileID: 8579207804176495586}
   - component: {fileID: 4145966993958646968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

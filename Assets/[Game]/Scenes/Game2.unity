@@ -730,7 +730,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.6117647, g: 0.85098046, b: 0.85098046, a: 0}
+  m_BackGroundColor: {r: 0.85464084, g: 0.7216981, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -770,13 +770,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.6427876, y: 0, z: 0, w: 0.7660445}
-  m_LocalPosition: {x: -0.07, y: 8.36, z: 3.34}
+  m_LocalRotation: {x: 0.5735764, y: 0, z: 0, w: 0.8191521}
+  m_LocalPosition: {x: -0.07, y: 8.36, z: 1.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1480964764}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 80, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 70, y: 0, z: 0}
 --- !u!1 &1327905837
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +827,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1480964761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480964764}
+  - component: {fileID: 1480964763}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &1480964763
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480964761}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1480964764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480964761}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!1 &2069529687
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,7 +1008,7 @@ GameObject:
   - component: {fileID: 965324571086905184}
   - component: {fileID: 4034850528948278514}
   - component: {fileID: 5111449392003467136}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1005,7 +1080,7 @@ GameObject:
   - component: {fileID: 8110605993241683808}
   - component: {fileID: 1341215985367903154}
   - component: {fileID: 7607671366320916472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1451,7 +1526,7 @@ GameObject:
   - component: {fileID: 1207144544312950557}
   - component: {fileID: 2027853418760072536}
   - component: {fileID: 563545293611687215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1510,16 +1585,28 @@ GameObject:
   - component: {fileID: 1336122458651652192}
   - component: {fileID: 5343012701995574450}
   - component: {fileID: 7896662404365528907}
-  - component: {fileID: 7292652643067773382}
   - component: {fileID: 8885830492752003486}
   - component: {fileID: 4693471261974151641}
-  m_Layer: 0
+  - component: {fileID: 1855778680197491419}
+  m_Layer: 8
   m_Name: ambulance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1855778680197491419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855778680197491418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &1946326474313662142
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1539,7 +1626,7 @@ GameObject:
   - component: {fileID: 1563774248875015243}
   - component: {fileID: 1826040347202596366}
   - component: {fileID: 189461799234084473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1565,17 +1652,17 @@ GameObject:
   - component: {fileID: 1727653523263435574}
   - component: {fileID: 2257847808116036540}
   - component: {fileID: 8110748130305747614}
-  - component: {fileID: 2086891783750894712}
   - component: {fileID: 6957732137891536533}
   - component: {fileID: 2713988705128110190}
-  m_Layer: 0
+  - component: {fileID: 2067727365074708877}
+  m_Layer: 8
   m_Name: firetruck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2086891783750894712
+--- !u!114 &2067727365074708877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1634,7 +1721,7 @@ GameObject:
   - component: {fileID: 3219732789533446942}
   - component: {fileID: 1600439578962204812}
   - component: {fileID: 7432285595659275262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1652,7 +1739,7 @@ GameObject:
   - component: {fileID: 5373897448733043426}
   - component: {fileID: 3008832796173638069}
   - component: {fileID: 571357168355774196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1670,7 +1757,7 @@ GameObject:
   - component: {fileID: 879546506313355744}
   - component: {fileID: 4856803030841886280}
   - component: {fileID: 6377559827908203266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1688,7 +1775,7 @@ GameObject:
   - component: {fileID: 8052029832619024484}
   - component: {fileID: 6329302104644792500}
   - component: {fileID: 7586998183681874832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: doorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1706,7 +1793,7 @@ GameObject:
   - component: {fileID: 5856339027243166494}
   - component: {fileID: 3699628658549008332}
   - component: {fileID: 5213106440901675910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1740,7 +1827,7 @@ GameObject:
   - component: {fileID: 4298811572219392692}
   - component: {fileID: 3369282456502151789}
   - component: {fileID: 6936686377825266999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1800,7 +1887,7 @@ GameObject:
   - component: {fileID: 4529343234382655970}
   - component: {fileID: 3148332245476960571}
   - component: {fileID: 7293307432868720225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1826,7 +1913,7 @@ GameObject:
   - component: {fileID: 5353501415617483205}
   - component: {fileID: 1946326474313662142}
   - component: {fileID: 4987316915887861873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1852,7 +1939,7 @@ GameObject:
   - component: {fileID: 5708438807232483987}
   - component: {fileID: 2193739449868533224}
   - component: {fileID: 4631254827752567591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2088,16 +2175,28 @@ GameObject:
   - component: {fileID: 5424511868376832523}
   - component: {fileID: 1431792293573580553}
   - component: {fileID: 295157617196807468}
-  - component: {fileID: 7449213235291696930}
   - component: {fileID: 2261497744163443707}
   - component: {fileID: 1301454196072381744}
-  m_Layer: 0
+  - component: {fileID: 4615182883236970674}
+  m_Layer: 8
   m_Name: garbageTruck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4615182883236970674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615182883236970673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &4631254827752567591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2292,7 +2391,7 @@ GameObject:
   - component: {fileID: 5512059482768578080}
   - component: {fileID: 4655040332045288549}
   - component: {fileID: 6587774501662831634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2605,7 +2704,7 @@ GameObject:
   - component: {fileID: 3980722632009249926}
   - component: {fileID: 7383535681836801021}
   - component: {fileID: 4054270213479224626}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2659,7 +2758,7 @@ GameObject:
   - component: {fileID: 4876939506820371617}
   - component: {fileID: 6252179872138218616}
   - component: {fileID: 1747998633974926114}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2903,16 +3002,28 @@ GameObject:
   - component: {fileID: 7677776108518577781}
   - component: {fileID: 1202991269378207625}
   - component: {fileID: 4859468049458271821}
-  - component: {fileID: 8618613421095023112}
   - component: {fileID: 2976206011582289287}
   - component: {fileID: 5387020281467843494}
-  m_Layer: 0
+  - component: {fileID: 7045635454049930448}
+  m_Layer: 8
   m_Name: police
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7045635454049930448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7045635454049930447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7090093909709035743
 Transform:
   m_ObjectHideFlags: 0
@@ -2938,25 +3049,13 @@ GameObject:
   - component: {fileID: 7905374914926369374}
   - component: {fileID: 7012468524910888987}
   - component: {fileID: 8838092706530719852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7292652643067773382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855778680197491418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &7293307432868720225
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3052,18 +3151,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7449213235291696930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4615182883236970673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7484004917435155721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,7 +3162,7 @@ GameObject:
   - component: {fileID: 5589353020723087678}
   - component: {fileID: 1113363352249963401}
   - component: {fileID: 6212670378857843051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3203,7 +3290,7 @@ GameObject:
   - component: {fileID: 1654248608922482936}
   - component: {fileID: 5169247169815451523}
   - component: {fileID: 1839972492142614860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3317,7 +3404,7 @@ GameObject:
   - component: {fileID: 8755326850296062657}
   - component: {fileID: 6878906891628458356}
   - component: {fileID: 4652976079617023839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: doorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3398,7 +3485,7 @@ GameObject:
   - component: {fileID: 7090093909709035743}
   - component: {fileID: 8579207804372615174}
   - component: {fileID: 4145966994718934876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3427,18 +3514,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8202084430340003362}
   m_Mesh: {fileID: -8545447256379345787, guid: 10dacd15f3c5f3c4496304bae630f14f, type: 3}
---- !u!114 &8618613421095023112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7045635454049930447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257e487fabc8abe45b03615b0fd2e8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8687044949897981422
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,7 +3525,7 @@ GameObject:
   - component: {fileID: 8458790789709183349}
   - component: {fileID: 5762505053103665895}
   - component: {fileID: 4533340174861574549}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3482,7 +3557,7 @@ GameObject:
   - component: {fileID: 1007542037818999331}
   - component: {fileID: 8064222751801954033}
   - component: {fileID: 1506115168433775291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3552,7 +3627,7 @@ GameObject:
   - component: {fileID: 614888481649475957}
   - component: {fileID: 7681689780870745511}
   - component: {fileID: 1267143384424341997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3570,7 +3645,7 @@ GameObject:
   - component: {fileID: 8075146124442073635}
   - component: {fileID: 5371527878245151153}
   - component: {fileID: 4294937794035999427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}

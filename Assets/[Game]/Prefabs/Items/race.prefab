@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6277185608145051757}
   - component: {fileID: 3823370221210627263}
   - component: {fileID: 5620565917470884085}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 3095705454729910381}
   - component: {fileID: 1183612228998222847}
   - component: {fileID: 7024531314715771021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 5343004983766113619}
   - component: {fileID: 5098893746558652182}
   - component: {fileID: 6716156072111308641}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_frontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 5412464722619831793}
   - component: {fileID: 7293273097921723451}
   - component: {fileID: 5252079635169835954}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: race
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 1201893770505352075}
   - component: {fileID: 4747977861576580336}
   - component: {fileID: 2292344751487013439}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_backLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 7223207024491090860}
   - component: {fileID: 8167161751550839669}
   - component: {fileID: 4598598942279371823}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
