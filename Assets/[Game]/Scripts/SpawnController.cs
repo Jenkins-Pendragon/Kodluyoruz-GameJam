@@ -10,17 +10,11 @@ public class SpawnController : MonoBehaviour
     public Transform spawnRight;
     public Transform spawnRotation;
 
-    private void OnEnable()
+    private void Awake()
     {
-        EventManager.OnLevelReady.AddListener(Spawn);
+        OrderManager.Instance.SetLevelItems();
+        Spawn();
     }
-
-    private void OnDisable()
-    {
-        EventManager.OnLevelReady.RemoveListener(Spawn);
-    }
-
-
     private void Spawn()
     {
         StopAllCoroutines();

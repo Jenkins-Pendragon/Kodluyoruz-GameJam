@@ -43,15 +43,13 @@ public class OrderManager : Singleton<OrderManager>
 
     private void OnEnable()
     {
-        EventManager.OnGameStarted.AddListener(SetLevelItems);
-        EventManager.OnLevelReady.AddListener(NewOrder);
+        EventManager.OnGameStarted.AddListener(NewOrder);
         EventManager.OnOrderCompleted.AddListener(NewOrder);
     }
 
     private void OnDisable()
     {
-        EventManager.OnGameStarted.RemoveListener(SetLevelItems);
-        EventManager.OnLevelReady.RemoveListener(NewOrder);
+        EventManager.OnGameStarted.RemoveListener(NewOrder);
         EventManager.OnOrderCompleted.AddListener(NewOrder);
     }
 
@@ -61,11 +59,11 @@ public class OrderManager : Singleton<OrderManager>
         EventManager.OnOrderGenerated.Invoke();
     }
 
-    private void SetLevelItems()
+    public void SetLevelItems()
     {
         levelItems = SelectLevelItems(LevelManager.Instance.CurrentLevel.levelItemSize);
-        EventManager.OnLevelReady.Invoke();
     }
+
 
 
     

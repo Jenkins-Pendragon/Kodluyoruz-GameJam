@@ -15,6 +15,5 @@ public class Item : MonoBehaviour
     public void OnDisable()
     {
         transform.DOKill();
-        //DOTween.Kill(this.gameObject);
     }
 }
