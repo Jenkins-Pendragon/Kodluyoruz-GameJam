@@ -27,13 +27,13 @@ public class ShowOrderUI : MonoBehaviour
 
     public void ShowOrderIcon()
     {
-        int orderCount = LevelManager.Instance.orderItems.Count;
+        int orderCount = OrderManager.Instance.orderItems.Count;
         switch (orderCount)
         {
             case 1:
                 for (int i = 0; i < orderCount; i++)
                 {
-                    Size1Images[i].sprite = LevelManager.Instance.orderItems.Values.ElementAt(i).toyIcon;
+                    Size1Images[i].sprite = OrderManager.Instance.orderItems.Values.ElementAt(i).toyIcon;
                     Size1Images[i].DOFade(0, 0);
                     Size1Images[i].DOFade(1, 2);
                 }
@@ -43,7 +43,7 @@ public class ShowOrderUI : MonoBehaviour
             case 2:
                 for (int i = 0; i < orderCount; i++)
                 {
-                    Size2Images[i].sprite = LevelManager.Instance.orderItems.Values.ElementAt(i).toyIcon;
+                    Size2Images[i].sprite = OrderManager.Instance.orderItems.Values.ElementAt(i).toyIcon;
                     Size2Images[i].DOFade(0, 0);
                     Size2Images[i].DOFade(1, 2);
                     DisableParentsExcept(orderCount - 1);
@@ -52,7 +52,7 @@ public class ShowOrderUI : MonoBehaviour
             case 3:
                 for (int i = 0; i < orderCount; i++)
                 {
-                    Size3Images[i].sprite = LevelManager.Instance.orderItems.Values.ElementAt(i).toyIcon;
+                    Size3Images[i].sprite = OrderManager.Instance.orderItems.Values.ElementAt(i).toyIcon;
                     Size3Images[i].DOFade(0, 0);
                     Size3Images[i].DOFade(1, 2);
                     DisableParentsExcept(orderCount - 1);
@@ -61,7 +61,7 @@ public class ShowOrderUI : MonoBehaviour
             case 4:
                 for (int i = 0; i < orderCount; i++)
                 {
-                    Size4Images[i].sprite = LevelManager.Instance.orderItems.Values.ElementAt(i).toyIcon;
+                    Size4Images[i].sprite = OrderManager.Instance.orderItems.Values.ElementAt(i).toyIcon;
                     Size4Images[i].DOFade(0, 0);
                     Size4Images[i].DOFade(1, 2);
                     DisableParentsExcept(orderCount - 1);
