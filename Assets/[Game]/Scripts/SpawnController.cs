@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class SpawnManager : MonoBehaviour
+public class SpawnController : MonoBehaviour
 {
 
     public Transform spawnLeft;
@@ -12,13 +12,14 @@ public class SpawnManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.OnLevelStarted.AddListener(Spawn);
+        EventManager.OnLevelReady.AddListener(Spawn);
     }
 
     private void OnDisable()
     {
-        EventManager.OnLevelStarted.RemoveListener(Spawn);
+        EventManager.OnLevelReady.RemoveListener(Spawn);
     }
+
 
     private void Spawn()
     {

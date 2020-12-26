@@ -10,10 +10,12 @@ public class PackingArea : MonoBehaviour
     public float itemDownScale = 0.1f;
     public float tweenDelay = 0.2f;
     public Transform jumpPoint;
+    public WaitForSeconds checkDelay = new WaitForSeconds(0.5f);
 
     //List for items in the gif box
     private List<GameObject> packedItems = new List<GameObject>();
     private bool isColliding;
+    
 
     #region Perspective Camera Simulation
     private float defaultItemScale;
@@ -42,6 +44,17 @@ public class PackingArea : MonoBehaviour
     }
     #endregion
 
+    private void OnEnable()
+    {
+        EventManager.OnOrderFailed.AddListener(ResetPackedItemList);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnOrderFailed.RemoveListener(ResetPackedItemList);
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (isColliding) return;
@@ -57,15 +70,31 @@ public class PackingArea : MonoBehaviour
                 return;
             }
 
+            OrderManager.Instance.orderItems.Remove(item.itemID);
             isColliding = true;
             PackItem(other.gameObject);
             DisableItem(other.gameObject);
-            OrderManager.Instance.orderItems.Remove(item.itemID);
-            if (OrderManager.Instance.orderItems.Count == 0)
-            {
-                EventManager.OnOrderDelivered.Invoke();
-            }
+            StartCoroutine(CheckOrder());
         }
+    }
+
+    IEnumerator CheckOrder() 
+    {
+        yield return checkDelay;
+        if (OrderManager.Instance.orderItems.Count == 0)
+        {
+            EventManager.OnOrderCompleted.Invoke();
+            ResetPackedItemList();
+        }
+    }
+
+    private void ResetPackedItemList()
+    {
+        foreach (GameObject item in packedItems)
+        {
+            Destroy(item);
+        }
+        packedItems = new List<GameObject>();
     }
 
     private void PackItem(GameObject go)
@@ -87,6 +116,8 @@ public class PackingArea : MonoBehaviour
             packedItems[i].transform.DOScale(Vector3.one * itemDownScale, tweenDelay);
         }
     }
+
+
 
     //If the item dosent ordered, jump though the belt
     private void WrongItem(GameObject go)

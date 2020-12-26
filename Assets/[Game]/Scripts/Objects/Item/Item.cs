@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 
 public class Item : MonoBehaviour
@@ -9,5 +10,11 @@ public class Item : MonoBehaviour
     public Sprite toyIcon;
     public GameObject itemPrefab;
     [HideInInspector]
-    public bool isPackable = true;    
+    public bool isPackable = true;
+
+    public void OnDisable()
+    {
+        transform.DOKill();
+        //DOTween.Kill(this.gameObject);
+    }
 }

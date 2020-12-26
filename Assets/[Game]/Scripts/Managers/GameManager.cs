@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     private bool isGameStarted;
-    public bool IsGameStarted { get { return isGameStarted; } private set { isGameStarted = value; } }    
+    public bool IsGameStarted { get { return isGameStarted; } private set { isGameStarted = value; } }
 
     public void StartGame()
     {
@@ -25,11 +25,4 @@ public class GameManager : Singleton<GameManager>
         EventManager.OnGameEnd.Invoke();
     }
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartGame();
-        }
-    }
 }

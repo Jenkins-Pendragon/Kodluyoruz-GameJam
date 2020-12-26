@@ -6,12 +6,13 @@ using UnityEngine.Events;
 public static class EventManager 
 {
 
-    public static UnityEvent OnOrderDelivered = new UnityEvent();
+    public static UnityEvent OnOrderCompleted = new UnityEvent();
     public static UnityEvent OnOrderFailed = new UnityEvent();
 
     public static UnityEvent OnGameStarted = new UnityEvent();
     public static UnityEvent OnGameEnd= new UnityEvent();
 
+    public static UnityEvent OnLevelReady = new UnityEvent();
     public static UnityEvent OnLevelStarted = new UnityEvent();
     public static UnityEvent OnLevelFinished = new UnityEvent();
 

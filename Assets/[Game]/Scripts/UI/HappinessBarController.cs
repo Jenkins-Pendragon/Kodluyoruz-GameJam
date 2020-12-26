@@ -28,13 +28,13 @@ public class HappinessBarController : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.OnOrderDelivered.AddListener(IncreaseHappiness);
+        EventManager.OnOrderCompleted.AddListener(IncreaseHappiness);
         EventManager.OnOrderFailed.AddListener(DecreaseHappiness);
     }
 
     private void OnDisable()
     {
-        EventManager.OnOrderDelivered.RemoveListener(IncreaseHappiness);
+        EventManager.OnOrderCompleted.RemoveListener(IncreaseHappiness);
         EventManager.OnOrderFailed.RemoveListener(DecreaseHappiness);
     }
 
