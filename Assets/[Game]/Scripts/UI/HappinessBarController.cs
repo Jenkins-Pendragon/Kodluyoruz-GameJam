@@ -23,7 +23,8 @@ public class HappinessBarController : MonoBehaviour
             return happinessTotal;
         } 
     }
-    private float targetHappiness, currentHappiness=10f;
+    private float currentHappiness=20f;
+    private float tweenDelay = 1f;
 
     private void OnEnable()
     {
@@ -46,55 +47,33 @@ public class HappinessBarController : MonoBehaviour
     {
         currentHappiness += happinessAmount;
         UpdateHappinesBar();
-        if (currentHappiness>= HappinessTotal)
+        if (currentHappiness >= HappinessTotal)
         {
             EventManager.OnLevelSuccesed.Invoke();
         }
         else
         {
-            
+            OrderManager.Instance.NewOrder();
         }
     }
 
     public void DecreaseHappiness() 
     {
-        StartCoroutine(DecreaseHappinessCo());
-    }
-    IEnumerator IncreaseHappinessCo()
-    {
-        targetHappiness = currentHappiness + happinessAmount;
-        while (currentHappiness < targetHappiness)
+        currentHappiness -= happinessAmount;
+        UpdateHappinesBar();
+        if (currentHappiness <= 0)
         {
-            currentHappiness+=0.5f;
-            if (currentHappiness>= HappinessTotal)
-            {
-                currentHappiness = 100;
-            }
-            UpdateHappinesBar();
-            yield return new WaitForSeconds(0.02f);
+            EventManager.OnLevelFailed.Invoke();
         }
-
-    }
-    IEnumerator DecreaseHappinessCo()
-    {
-        targetHappiness = currentHappiness - happinessAmount;
-        while (currentHappiness > targetHappiness)
+        else
         {
-            currentHappiness -= 0.5f;
-            if (currentHappiness <= 0)
-            {
-                currentHappiness = 0;
-            }
-            UpdateHappinesBar();
-            yield return new WaitForSeconds(0.02f);
+            OrderManager.Instance.NewOrder();
         }
-
     }
-    
     private void UpdateHappinesBar()
     {        
         float ratio = currentHappiness / HappinessTotal;
-        DOTween.To(() => happinessBarImage.fillAmount, (a) => happinessBarImage.fillAmount = a, ratio, 2f).
+        DOTween.To(() => happinessBarImage.fillAmount, (a) => happinessBarImage.fillAmount = a, ratio, tweenDelay).
             OnComplete(()=> {
                 if (ratio >= 1) happinessBarImage.color = Color.green;               
                 else if (ratio <= 0) happinessBarOutImage.color = Color.red;                

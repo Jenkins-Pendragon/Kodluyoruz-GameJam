@@ -70,7 +70,7 @@ public class PackingArea : MonoBehaviour
 
     private void PackItem(GameObject go)
     {
-        packedItems.Add(go);
+        packedItems.Add(go);        
         int count = packedItems.Count;
         //Safety for bugs
         if (count > itemPoints.Count)
@@ -90,7 +90,7 @@ public class PackingArea : MonoBehaviour
 
     //If the item dosent ordered, jump though the belt
     private void WrongItem(GameObject go)
-    {
+    {        
         go.transform.DORotate(new Vector3(0, 90f, 0f), 0.5f);
         go.transform.DOJump(jumpPoint.position, 1.75f, 1, 0.5f);
 
