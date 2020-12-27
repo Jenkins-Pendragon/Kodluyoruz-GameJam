@@ -24,7 +24,7 @@ public class HappinessBarController : MonoBehaviour
         } 
     }
     private float currentHappiness=20f;
-    private float tweenDelay = 1f;
+    private float tweenDelay = 0.3f;
 
     private void OnEnable()
     {
