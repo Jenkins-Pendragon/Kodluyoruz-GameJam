@@ -19,3 +19,4 @@ MonoBehaviour:
   defaultItemScale: 0.3
   maxItemScale: 0.5
   happinessTotal: 100
+  orderTime: 20

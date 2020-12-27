@@ -14,4 +14,5 @@ public class Level: ScriptableObject
     public float defaultItemScale;
     public float maxItemScale;
     public float happinessTotal;
+    public float orderTime;
 }

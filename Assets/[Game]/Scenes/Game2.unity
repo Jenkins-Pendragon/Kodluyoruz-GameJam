@@ -1046,7 +1046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591537447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.326, z: -0.022}
+  m_LocalPosition: {x: 0, y: 0.18, z: -0.022}
   m_LocalScale: {x: 0.3388, y: 0.3388, z: 0.3388}
   m_Children: []
   m_Father: {fileID: 6977664466559901155}
@@ -1356,7 +1356,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4175415518376919916}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 2.5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 3
@@ -1431,8 +1431,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2.2
-      minScalar: 1.5
+      scalar: 1.5
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6139,7 +6139,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4175415518491617774}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 2.5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 3
@@ -6214,8 +6214,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2.2
-      minScalar: 1.5
+      scalar: 1.5
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -20034,7 +20034,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4175415519163399594}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 2.5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 3
@@ -20109,8 +20109,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2.2
-      minScalar: 1.5
+      scalar: 1.5
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -24761,7 +24761,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67100469696894583}
   m_LocalRotation: {x: 0.4386849, y: 0, z: 0, w: 0.898641}
-  m_LocalPosition: {x: 0, y: 0.08, z: 0.25}
+  m_LocalPosition: {x: 0, y: 0.29, z: 0.19}
   m_LocalScale: {x: 0.3388, y: 0.3388, z: 0.3388}
   m_Children: []
   m_Father: {fileID: 6977664466559901155}

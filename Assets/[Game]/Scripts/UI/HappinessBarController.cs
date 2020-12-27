@@ -53,11 +53,7 @@ public class HappinessBarController : MonoBehaviour
         if (currentHappiness >= HappinessTotal)
         {
             EventManager.OnLevelSuccesed.Invoke();
-        }
-        else
-        {
-            OrderManager.Instance.NewOrder();
-        }
+        }        
     }
 
     public void DecreaseHappiness() 
@@ -67,11 +63,7 @@ public class HappinessBarController : MonoBehaviour
         if (currentHappiness <= 0)
         {
             EventManager.OnLevelFailed.Invoke();
-        }
-        else
-        {
-            OrderManager.Instance.NewOrder();
-        }
+        }       
     }
     /*
     private void UpdateHappinesBar()
