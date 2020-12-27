@@ -4,7 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using System.Linq;
 
-public class PackingArea : MonoBehaviour
+public class PackingController : MonoBehaviour
 {
     public List<Points> itemPoints;
     public float itemDownScale = 0.1f;
