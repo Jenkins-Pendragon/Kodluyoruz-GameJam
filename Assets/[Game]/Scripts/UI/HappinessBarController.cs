@@ -58,6 +58,7 @@ public class HappinessBarController : MonoBehaviour
 
     public void DecreaseHappiness() 
     {
+        Debug.Log("hi");
         currentHappiness -= happinessAmount;
         UpdateHappinesBar();
         if (currentHappiness <= 0)
