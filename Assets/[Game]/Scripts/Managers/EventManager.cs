@@ -20,7 +20,7 @@ public static class EventManager
     public static UnityEvent OnLevelSuccesed = new UnityEvent();
     public static UnityEvent OnLevelFailed= new UnityEvent();
 
-    public static UnityEvent OnItemPacked = new UnityEvent();
+    public static UnityEvent OnItemsPacked = new UnityEvent();
 }
 
 public class ToDo 
@@ -28,6 +28,8 @@ public class ToDo
     //HappinessBar datalarını level dataya taşı
     //DragAndDrop scriptini düzenle
     //Pooling System ?
-
+    //Objenin pozisyonuna göre kutunun sağına veya soluna atması
+    //Paketleme Animasyonu
+    //İki item aynı anda atıldığında erken bitme bugu
 
 }

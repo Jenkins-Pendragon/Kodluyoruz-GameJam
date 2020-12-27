@@ -83,7 +83,8 @@ public class PackingController : MonoBehaviour
         yield return checkDelay;
         if (OrderManager.Instance.orderItems.Count == 0)
         {
-            EventManager.OnOrderCompleted.Invoke();
+            //EventManager.OnOrderCompleted.Invoke();
+            EventManager.OnItemsPacked.Invoke();
             ResetPackedItemList();
         }
     }
@@ -116,20 +117,15 @@ public class PackingController : MonoBehaviour
             packedItems[i].transform.DOScale(Vector3.one * itemDownScale, tweenDelay);
         }
     }
-
-
-
     //If the item dosent ordered, jump though the belt
     private void WrongItem(GameObject go)
     {        
         go.transform.DORotate(new Vector3(0, 90f, 90f), 0.5f);
         go.transform.DOJump(jumpPoint.position, 1.75f, 1, 0.5f);
-
         
         Sequence seq = DOTween.Sequence();
         seq.Append(go.transform.DOScale(Vector3.one * MaxItemScale, 0.25f));
         seq.Append(go.transform.DOScale(Vector3.one * DefaultItemScale, 0.25f));
-        
     }
 
     private void DisableItem(GameObject go)
