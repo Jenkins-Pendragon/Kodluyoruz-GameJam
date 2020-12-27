@@ -8,6 +8,8 @@ public class PackingAnimation : MonoBehaviour
     public Transform lidDefaultTransform;
     public GameObject lid;
     public float tweenDelay = 0.2f;
+    public GameObject animatedObj;
+    public GameObject particles;
 
     private void OnEnable()
     {
@@ -19,12 +21,19 @@ public class PackingAnimation : MonoBehaviour
         EventManager.OnItemsPacked.RemoveListener(PlayPackAnimation);
     }
 
-    private void PlayPackAnimation() 
+    private void PlayPackAnimation()
     {
         lid.transform.DOMove(lidDefaultTransform.position, tweenDelay);
-        lid.transform.DORotate(Vector3.zero, tweenDelay).OnComplete(()=> 
+        lid.transform.DORotate(Vector3.zero, tweenDelay).OnComplete(() =>
         {
             EventManager.OnOrderCompleted.Invoke();
+            WhenAnimFinish();
         });
+    }
+
+    public void WhenAnimFinish()
+    {
+        particles.SetActive(true);
+        animatedObj.SetActive(true);
     }
 }
