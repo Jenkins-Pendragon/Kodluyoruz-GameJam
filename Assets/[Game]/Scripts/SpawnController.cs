@@ -9,7 +9,7 @@ public class SpawnController : MonoBehaviour
     public Transform spawnLeft;
     public Transform spawnRight;
     public Transform spawnRotation;
-
+    private Dictionary<string, Item> levelItemsClone;
     private void Awake()
     {
         OrderManager.Instance.SetLevelItems();
@@ -17,9 +17,15 @@ public class SpawnController : MonoBehaviour
     }
     private void Spawn()
     {
+        ResetClone();
         StopAllCoroutines();
         StartCoroutine(SpawnCo());
     }  
+
+    private void ResetClone() 
+    {
+        levelItemsClone = new Dictionary<string, Item>(OrderManager.Instance.levelItems);
+    }
     IEnumerator SpawnCo()
     {
         while (true)
@@ -28,8 +34,13 @@ public class SpawnController : MonoBehaviour
                 spawnLeft.position.y + Random.Range(0.5f,1f),
                 Random.Range(spawnLeft.position.z, spawnRight.position.z));
 
-            int random = Random.Range(0, OrderManager.Instance.levelItems.Count);
-            Instantiate(OrderManager.Instance.levelItems.Values.ElementAt(random).itemPrefab.gameObject, randomPos, spawnRotation.rotation);
+            int random = Random.Range(0, levelItemsClone.Count);
+            Instantiate(levelItemsClone.Values.ElementAt(random).itemPrefab.gameObject, randomPos, spawnRotation.rotation);
+
+            
+            levelItemsClone.Remove(levelItemsClone.Keys.ElementAt(random));
+            if (levelItemsClone.Count == 0) ResetClone();
+
             yield return new WaitForSeconds(LevelManager.Instance.CurrentLevel.spawnDelay);
         }
     }
