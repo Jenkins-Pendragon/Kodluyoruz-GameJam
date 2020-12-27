@@ -50,7 +50,7 @@ public class OrderManager : Singleton<OrderManager>
     private void OnDisable()
     {
         EventManager.OnGameStarted.RemoveListener(NewOrder);
-        EventManager.OnOrderCompleted.AddListener(NewOrder);
+        EventManager.OnOrderCompleted.RemoveListener(NewOrder);
     }
 
     public void NewOrder()

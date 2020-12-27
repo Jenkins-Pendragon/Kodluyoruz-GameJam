@@ -31,5 +31,6 @@ public class ToDo
     //Objenin pozisyonuna göre kutunun sağına veya soluna atması
     //Paketleme Animasyonu
     //İki item aynı anda atıldığında erken bitme bugu
+    //Yollar arasına jump, Capsule collider
 
 }
