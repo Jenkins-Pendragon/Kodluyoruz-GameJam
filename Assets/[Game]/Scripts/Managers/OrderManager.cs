@@ -55,6 +55,12 @@ public class OrderManager : Singleton<OrderManager>
 
     public void NewOrder()
     {
+        StartCoroutine(NewOrderCo());
+    }
+
+    private IEnumerator NewOrderCo() 
+    {
+        yield return new WaitForSeconds(0.5f);
         orderItems = GenerateOrder(LevelManager.Instance.CurrentLevel.orderItemSize, levelItems);
         EventManager.OnOrderGenerated.Invoke();
     }

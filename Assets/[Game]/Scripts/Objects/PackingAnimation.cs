@@ -16,12 +16,12 @@ public class PackingAnimation : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.OnOrderCompleted.AddListener(PlayPackAnimation);
+        EventManager.OnItemsPacked.AddListener(PlayPackAnimation);
     }
 
     private void OnDisable()
     {
-        EventManager.OnOrderCompleted.RemoveListener(PlayPackAnimation);
+        EventManager.OnItemsPacked.RemoveListener(PlayPackAnimation);
     }
 
     private void Start()
@@ -55,8 +55,9 @@ public class PackingAnimation : MonoBehaviour
                 {
                     lid.transform.DOMove(lidPos, tweenDelay);
                     lid.transform.DORotate(lidRotation, tweenDelay);
+                    EventManager.OnOrderCompleted.Invoke();
                 });
-            });
+            });            
         });
 
     }
