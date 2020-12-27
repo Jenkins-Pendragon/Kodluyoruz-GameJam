@@ -10,7 +10,7 @@ public class PackingController : MonoBehaviour
     public float itemDownScale = 0.1f;
     public float tweenDelay = 0.2f;
     public Transform jumpPoint;
-    public WaitForSeconds checkDelay = new WaitForSeconds(0.5f);
+    public WaitForSeconds checkDelay = new WaitForSeconds(0.1f);
 
     //List for items in the gif box
     private List<GameObject> packedItems = new List<GameObject>();
