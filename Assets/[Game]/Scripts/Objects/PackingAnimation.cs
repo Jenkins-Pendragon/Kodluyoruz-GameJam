@@ -12,6 +12,7 @@ public class PackingAnimation : MonoBehaviour
     private Vector3 boxPos;
     private Vector3 lidPos;
     private Vector3 lidRotation;
+    public ParticleSystem[] particles;
 
     private void OnEnable()
     {
@@ -40,6 +41,10 @@ public class PackingAnimation : MonoBehaviour
 
             gameObject.transform.DOJump(jumpPoint.position, 1.5f, 1, 0.5f);
             gameObject.transform.DORotate(new Vector3(45, 0, 0), 0.5f);
+            for (int i = 0; i < particles.Length; i++)
+            {
+                particles[i].Play();
+            }
             Sequence seq = DOTween.Sequence();
             seq.Append(gameObject.transform.DOScale(Vector3.one * 4f, 0.25f));
             seq.Append(gameObject.transform.DOScale(Vector3.one * 0f, 0.25f)).OnComplete(() =>
