@@ -8,37 +8,37 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _defaultMat
-    second: {fileID: 2100000, guid: 55d2a0c812dcef54d92a349ade71a2b7, type: 2}
+    second: {fileID: 2100000, guid: 3ecd993a7e716064ea3567edaed18829, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: carTire
-    second: {fileID: 2100000, guid: bbc8163a757b8e14a8a691eacd709bb5, type: 2}
+    second: {fileID: 2100000, guid: fe5380995205d594297c91d95d0aed26, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lightBack
-    second: {fileID: 2100000, guid: cd83c1a581c36c14a8928c181cef1384, type: 2}
+    second: {fileID: 2100000, guid: 9867c323a9f3117408e92e918440281d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lightFront
-    second: {fileID: 2100000, guid: 86dde661b2d99324f9ccf0ee0abc4563, type: 2}
+    second: {fileID: 2100000, guid: 6d66b65d18c6c634595394d21e126b9f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: paintYellow
-    second: {fileID: 2100000, guid: fa3f76d03e3a5ba4299ae8059014df26, type: 2}
+    second: {fileID: 2100000, guid: b5e99b9eb741b1a448239408c2cacaff, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: plastic
-    second: {fileID: 2100000, guid: 77faa794c42442649b807dc58ef3aa63, type: 2}
+    second: {fileID: 2100000, guid: c68fa86984680eb4fb503480dc5b030b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: window
-    second: {fileID: 2100000, guid: 0ca70a164b1e41a4ea1c3793bcc6f791, type: 2}
+    second: {fileID: 2100000, guid: b4a8f94a5b19ed147aeb5f9aa5ebfcdf, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

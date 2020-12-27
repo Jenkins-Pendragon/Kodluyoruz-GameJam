@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _defaultMat
-    second: {fileID: 2100000, guid: e2f251d62d6d36d44872ddface0dac53, type: 2}
+    second: {fileID: 2100000, guid: 3ecd993a7e716064ea3567edaed18829, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: carTire
-    second: {fileID: 2100000, guid: b0ab4274c966b1945a0cd41da8f9ea3b, type: 2}
+    second: {fileID: 2100000, guid: fe5380995205d594297c91d95d0aed26, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: paintRed
-    second: {fileID: 2100000, guid: fcf07129df71cb24d96c5187e543a289, type: 2}
+    second: {fileID: 2100000, guid: 6b8a6a757adba10408a83b16459afbc4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -28,12 +28,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: plastic
-    second: {fileID: 2100000, guid: 9b1a758eb670fc641a66bd58b63c4d3f, type: 2}
+    second: {fileID: 2100000, guid: c68fa86984680eb4fb503480dc5b030b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: window
-    second: {fileID: 2100000, guid: 7f6be1ea5b6eff54b953d135f09042e9, type: 2}
+    second: {fileID: 2100000, guid: b4a8f94a5b19ed147aeb5f9aa5ebfcdf, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
