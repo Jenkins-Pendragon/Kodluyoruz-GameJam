@@ -83,8 +83,8 @@ public class PackingController : MonoBehaviour
         yield return checkDelay;
         if (OrderManager.Instance.orderItems.Count == 0)
         {
-            //EventManager.OnOrderCompleted.Invoke();
-            EventManager.OnItemsPacked.Invoke();
+            EventManager.OnOrderCompleted.Invoke();
+            //EventManager.OnItemsPacked.Invoke();
             ResetPackedItemList();
         }
     }
