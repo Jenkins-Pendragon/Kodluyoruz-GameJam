@@ -9,6 +9,9 @@ public class HappinessBarController : MonoBehaviour
 
     public Image happinessBarImage;
     public Image happinessBarOutImage;
+    public Slider progressBar;
+    public Image fillArea;
+    
     public float happinessAmount; //Check To Do
 
     private float happinessTotal = 0;
@@ -70,6 +73,7 @@ public class HappinessBarController : MonoBehaviour
             OrderManager.Instance.NewOrder();
         }
     }
+    /*
     private void UpdateHappinesBar()
     {        
         float ratio = currentHappiness / HappinessTotal;
@@ -77,6 +81,17 @@ public class HappinessBarController : MonoBehaviour
             OnComplete(()=> {
                 if (ratio >= 1) happinessBarImage.color = Color.green;               
                 else if (ratio <= 0) happinessBarOutImage.color = Color.red;                
+            });
+    }
+    */
+
+    private void UpdateHappinesBar()
+    {
+        float ratio = currentHappiness / HappinessTotal;
+        DOTween.To(() => progressBar.value, (a) => progressBar.value = a, ratio, tweenDelay).
+            OnComplete(() => {                
+                if (ratio >= 1) fillArea.color = Color.green;
+                else if (ratio <= 0) fillArea.color = Color.red;                
             });
     }
 }

@@ -10,6 +10,16 @@ public class SpawnController : MonoBehaviour
     public Transform spawnRight;
     public Transform spawnRotation;
     private Dictionary<string, Item> levelItemsClone;
+    private bool canSpawn = true;
+
+    private void OnEnable()
+    {
+        EventManager.OnLevelFinished.AddListener(() => canSpawn = false);
+    }
+    private void OnDisable()
+    {
+        EventManager.OnLevelFinished.RemoveListener(() => canSpawn = false);
+    }
     private void Awake()
     {
         OrderManager.Instance.SetLevelItems();
@@ -28,7 +38,7 @@ public class SpawnController : MonoBehaviour
     }
     IEnumerator SpawnCo()
     {
-        while (true)
+        while (canSpawn)
         {           
             Vector3 randomPos = new Vector3(Random.Range(spawnLeft.position.x, spawnRight.position.x),
                 spawnLeft.position.y + Random.Range(0.5f,1f),
