@@ -7,21 +7,22 @@ public class GenerateConveyorBeltArrow : MonoBehaviour
     public PathCreator pathCreator;
     public int frequency;
     private float spacing;
-    private float speed;
+    private float speed = -1;
     private float Speed
     {
         get
         {
-            if (speed == 0)
+            if (speed == -1)
             {
                 //0.45f static value that provide synchronization with roads
                 speed = 0.45f * LevelManager.Instance.CurrentLevel.conveyorBeltSpeed;
             }
             return speed;
-        }
-    }
+        }       
+    }    
+
     void Start()
-    {        
+    {     
         //Space that between two arrow
         spacing = pathCreator.path.length / frequency;
         

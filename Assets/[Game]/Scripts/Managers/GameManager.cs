@@ -35,7 +35,7 @@ public class GameManager : Singleton<GameManager>
             return;
 
         IsGameStarted = false;
-        EventManager.OnGameEnd.Invoke();
+        EventManager.OnGameEnd.Invoke();        
     }
 
 }

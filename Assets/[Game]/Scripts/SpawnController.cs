@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using PathCreation;
 
 public class SpawnController : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class SpawnController : MonoBehaviour
     public Transform spawnLeft;
     public Transform spawnRight;
     public Transform spawnRotation;
+    public PathCreator pathCreator;
     private Dictionary<string, Item> levelItemsClone;
     private bool canSpawn = true;
     private Coroutine SpawnCoroutine;
+    private float spacing;
+    private int frequency = 10;
 
     private void OnEnable()
     {
@@ -28,13 +32,14 @@ public class SpawnController : MonoBehaviour
         EventManager.OnLevelSuccesed.RemoveListener(StopSpawn);
     }
     private void Start()
-    {
+    {        
         OrderManager.Instance.SetLevelItems();
+        ResetClone();
+        SpawnLevelItems();
         Spawn();
     }
     private void Spawn()
-    {
-        ResetClone();
+    {        
         StopAllCoroutines();
         SpawnCoroutine = StartCoroutine(SpawnCo());
     }
@@ -65,5 +70,20 @@ public class SpawnController : MonoBehaviour
     private void StopSpawn()
     {
         StopCoroutine(SpawnCoroutine);
+    }
+
+    private void SpawnLevelItems()
+    {
+        spacing = pathCreator.path.length / frequency;
+
+        for (int i = 0; i < frequency; i++)
+        {
+            Vector3 pos = pathCreator.path.GetPointAtDistance(spacing * i) + Vector3.up*0.25f;
+
+            int random = Random.Range(0, levelItemsClone.Count);
+            Instantiate(levelItemsClone.Values.ElementAt(random).itemPrefab.gameObject, pos, spawnRotation.rotation);
+            levelItemsClone.Remove(levelItemsClone.Keys.ElementAt(random));
+            if (levelItemsClone.Count == 0) ResetClone();            
+        }
     }
 }
