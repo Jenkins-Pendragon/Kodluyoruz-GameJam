@@ -11,19 +11,19 @@ public class GameEndPanel : MonoBehaviour
     private void OnEnable()
     {
         EventManager.OnLevelFailed.AddListener(LevelFail);
-        EventManager.OnLevelSuccesed.AddListener(levelSuccess);
+        EventManager.OnLevelSuccesed.AddListener(LevelSuccess);
     }
     private void OnDisable()
     {
         EventManager.OnLevelFailed.RemoveListener(LevelFail);
-        EventManager.OnLevelSuccesed.RemoveListener(levelSuccess);
+        EventManager.OnLevelSuccesed.RemoveListener(LevelSuccess);
     }
     private void LevelFail()
     {
         failPanel.gameObject.SetActive(true);
         successPanel.gameObject.SetActive(false);
     }
-    private void levelSuccess()
+    private void LevelSuccess()
     {
         failPanel.gameObject.SetActive(false);
         successPanel.gameObject.SetActive(true);
@@ -36,9 +36,8 @@ public class GameEndPanel : MonoBehaviour
     }
 
     #region BUTTONS
-    IEnumerator NextLevelButtonCo()
+    IEnumerator LevelButtonCo()
     {
-        LevelManager.Instance.LevelUp();
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         yield return SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
         SceneManager.SetActiveScene(SceneManager.GetSceneAt(2));
@@ -50,11 +49,12 @@ public class GameEndPanel : MonoBehaviour
 
     public void NextLevelButton()
     {
-        StartCoroutine(NextLevelButtonCo());
+        LevelManager.Instance.LevelUp();
+        StartCoroutine(LevelButtonCo());
     }
     public void RestartLevelButton()
     {
-
+        StartCoroutine(LevelButtonCo());
     }
     #endregion
 }
