@@ -6,9 +6,6 @@ using DG.Tweening;
 
 public class HappinessBarController : MonoBehaviour
 {
-
-    public Image happinessBarImage;
-    public Image happinessBarOutImage;
     public Slider progressBar;
     public Image fillArea;
     
