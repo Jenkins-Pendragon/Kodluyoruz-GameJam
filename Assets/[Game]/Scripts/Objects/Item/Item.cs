@@ -11,9 +11,28 @@ public class Item : MonoBehaviour
     public GameObject itemPrefab;
     [HideInInspector]
     public bool isPackable = true;
-
+    private void OnEnable()
+    {
+        Add();
+    }
     public void OnDisable()
     {
+        if (ItemDataBase.Instance!=null)
+        {
+            Remove();
+        }        
         transform.DOKill();
+    }
+
+    private void Add() 
+    {
+        if (!ItemDataBase.Instance.activeItems.ContainsKey(this.itemID))
+        {
+            ItemDataBase.Instance.activeItems.Add(this.itemID, this);
+        }
+    }
+    private void Remove()
+    {
+        ItemDataBase.Instance.activeItems.Remove(this.itemID);
     }
 }
