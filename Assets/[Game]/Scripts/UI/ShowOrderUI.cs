@@ -17,6 +17,7 @@ public class ShowOrderUI : MonoBehaviour
 
     private void OnEnable()
     {
+        EventManager.OnGameStarted.AddListener(EnableOrderPanel);
         EventManager.OnOrderGenerated.AddListener(ShowOrderIcon);
         EventManager.OnLevelFailed.AddListener(DisableOrderPanel);
         EventManager.OnLevelSuccesed.AddListener(DisableOrderPanel);
@@ -24,6 +25,7 @@ public class ShowOrderUI : MonoBehaviour
 
     private void OnDisable()
     {
+        EventManager.OnGameStarted.RemoveListener(EnableOrderPanel);
         EventManager.OnOrderGenerated.RemoveListener(ShowOrderIcon);
         EventManager.OnLevelFailed.RemoveListener(DisableOrderPanel);
         EventManager.OnLevelSuccesed.RemoveListener(DisableOrderPanel);
@@ -33,7 +35,10 @@ public class ShowOrderUI : MonoBehaviour
     {
         orderPanel.SetActive(false);
     }
-
+    private void EnableOrderPanel()
+    {
+        orderPanel.SetActive(true);
+    }
     public void ShowOrderIcon()
     {
         int orderCount = OrderManager.Instance.orderItems.Count;

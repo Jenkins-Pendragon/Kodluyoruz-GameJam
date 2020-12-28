@@ -17,8 +17,15 @@ public class RandomSample : MonoBehaviour {
 	void Start () {
 		RandomizeCharacter();
 	}
-	
-	public void RandomizeCharacter(){
+	private void OnEnable()
+	{
+		EventManager.OnOrderGenerated.AddListener(RandomizeCharacter);
+	}
+	private void OnDisable()
+	{
+		EventManager.OnOrderGenerated.RemoveListener(RandomizeCharacter);
+	}
+	private void RandomizeCharacter(){
 		cbody.sprite = body[Random.Range(0,body.Length)];
 		cface.sprite = face[Random.Range(0,face.Length)];
 		chair.sprite = hair[Random.Range(0,hair.Length)];
