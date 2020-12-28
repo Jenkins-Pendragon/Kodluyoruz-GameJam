@@ -7,6 +7,19 @@ public class GameManager : Singleton<GameManager>
     private bool isGameStarted;
     public bool IsGameStarted { get { return isGameStarted; } private set { isGameStarted = value; } }
 
+
+    private void OnEnable()
+    {
+        EventManager.OnLevelFailed.AddListener(EndGame);
+        EventManager.OnLevelSuccesed.AddListener(EndGame);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnLevelFailed.RemoveListener(EndGame);
+        EventManager.OnLevelSuccesed.RemoveListener(EndGame);
+    }
+
     public void StartGame()
     {
         if (IsGameStarted)

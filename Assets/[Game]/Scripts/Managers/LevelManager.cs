@@ -6,8 +6,13 @@ using System.Linq;
 public class LevelManager : Singleton<LevelManager>
 {
     public LevelData LevelData;
-    public Level CurrentLevel { get { return (LevelData.Levels[LevelIndex]); } }   
-    
+    public Level CurrentLevel { get { return (LevelData.Levels[LevelIndex]); } }
+
+
+    private void Awake()
+    {
+        PlayerPrefs.SetInt("LastLevel", 0);
+    }
     public int LevelIndex
     {
         get
