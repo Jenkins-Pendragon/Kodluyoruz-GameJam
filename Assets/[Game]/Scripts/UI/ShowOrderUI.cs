@@ -16,7 +16,7 @@ public class ShowOrderUI : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.OnOrderGenerated.AddListener(ShowOrderIcon);
+        EventManager.OnOrderGenerated.AddListener(ShowOrderIcon);        
     }
 
     private void OnDisable()
