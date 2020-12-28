@@ -70,7 +70,7 @@ public class HappinessBarController : MonoBehaviour
 
     public void DecreaseHappiness() 
     {        
-        currentHappiness -= happinessAmount;
+        currentHappiness -= happinessAmount/2f;
         UpdateHappinesBar();
         if (currentHappiness <= 0)
         {

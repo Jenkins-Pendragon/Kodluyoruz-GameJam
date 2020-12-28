@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderItemSize: 2
   levelItemSize: 10
-  conveyorBeltSpeed: 0.5
+  conveyorBeltSpeed: 0.7
   spawnDelay: 1.5
   defaultItemScale: 0.3
   maxItemScale: 0.5
-  happinessTotal: 150
-  orderTime: 20
+  happinessTotal: 100
+  orderTime: 15

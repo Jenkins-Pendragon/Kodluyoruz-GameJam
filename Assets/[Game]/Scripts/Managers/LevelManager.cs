@@ -8,11 +8,6 @@ public class LevelManager : Singleton<LevelManager>
     public LevelData LevelData;
     public Level CurrentLevel { get { return (LevelData.Levels[LevelIndex]); } }
 
-
-    private void Awake()
-    {
-        PlayerPrefs.SetInt("LastLevel", 0);
-    }
     public int LevelIndex
     {
         get
@@ -29,7 +24,8 @@ public class LevelManager : Singleton<LevelManager>
     }
     public void LevelUp()
     {
-        PlayerPrefs.SetInt("LastLevel", PlayerPrefs.GetInt("LastLevel") +1 );
+        LevelIndex += 1;
+        PlayerPrefs.SetInt("LastLevel", LevelIndex);
     }
 }
 

@@ -17,6 +17,7 @@ public class SpawnController : MonoBehaviour
     private float spacing;
     private int frequency = 10;
 
+    
     private void OnEnable()
     {
         EventManager.OnLevelFailed.AddListener(() => canSpawn = false);
@@ -35,8 +36,7 @@ public class SpawnController : MonoBehaviour
     {        
         OrderManager.Instance.SetLevelItems();
         ResetClone();
-        SpawnLevelItems();
-        Spawn();
+        SpawnLevelItems();        
     }
     private void Spawn()
     {        
@@ -85,5 +85,7 @@ public class SpawnController : MonoBehaviour
             levelItemsClone.Remove(levelItemsClone.Keys.ElementAt(random));
             if (levelItemsClone.Count == 0) ResetClone();            
         }
+
+        Spawn();
     }
 }
