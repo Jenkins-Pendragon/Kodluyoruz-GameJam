@@ -2227,10 +2227,10 @@ GameObject:
   - component: {fileID: 1917314300}
   - component: {fileID: 1917314302}
   - component: {fileID: 1917314301}
-  - component: {fileID: 1917314303}
   - component: {fileID: 1917314304}
   - component: {fileID: 1917314305}
   - component: {fileID: 1917314306}
+  - component: {fileID: 1917314303}
   m_Layer: 5
   m_Name: InGamePanel
   m_TagString: Untagged
@@ -2311,7 +2311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 1250879176}
   fillArea: {fileID: 20288096}
-  happinessAmount: 90
+  happinessAmount: 100
+  defaultHappiness: 20
 --- !u!114 &1917314304
 MonoBehaviour:
   m_ObjectHideFlags: 0
