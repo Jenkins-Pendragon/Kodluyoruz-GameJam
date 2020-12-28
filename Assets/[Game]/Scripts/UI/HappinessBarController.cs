@@ -6,9 +6,6 @@ using DG.Tweening;
 
 public class HappinessBarController : MonoBehaviour
 {
-
-    public Image happinessBarImage;
-    public Image happinessBarOutImage;
     public Slider progressBar;
     public Image fillArea;
     
@@ -53,30 +50,27 @@ public class HappinessBarController : MonoBehaviour
         if (currentHappiness >= HappinessTotal)
         {
             EventManager.OnLevelSuccesed.Invoke();
-        }        
+        }
+        else
+        {
+            OrderManager.Instance.NewOrder();
+        }
     }
 
     public void DecreaseHappiness() 
-    {
-        Debug.Log("hi");
+    {        
         currentHappiness -= happinessAmount;
         UpdateHappinesBar();
         if (currentHappiness <= 0)
         {
             EventManager.OnLevelFailed.Invoke();
-        }       
+        }
+
+        else 
+        {
+            OrderManager.Instance.NewOrder();
+        }
     }
-    /*
-    private void UpdateHappinesBar()
-    {        
-        float ratio = currentHappiness / HappinessTotal;
-        DOTween.To(() => happinessBarImage.fillAmount, (a) => happinessBarImage.fillAmount = a, ratio, tweenDelay).
-            OnComplete(()=> {
-                if (ratio >= 1) happinessBarImage.color = Color.green;               
-                else if (ratio <= 0) happinessBarOutImage.color = Color.red;                
-            });
-    }
-    */
 
     private void UpdateHappinesBar()
     {

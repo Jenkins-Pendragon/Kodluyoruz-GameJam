@@ -43,35 +43,22 @@ public class OrderManager : Singleton<OrderManager>
 
     private void OnEnable()
     {
-        EventManager.OnGameStarted.AddListener(NewOrder);
-        EventManager.OnOrderCompleted.AddListener(NewOrder);
+        EventManager.OnGameStarted.AddListener(NewOrder);        
     }
 
     private void OnDisable()
     {
-        EventManager.OnGameStarted.RemoveListener(NewOrder);
-        EventManager.OnOrderCompleted.RemoveListener(NewOrder);
+        EventManager.OnGameStarted.RemoveListener(NewOrder);        
     }
 
     public void NewOrder()
-    {
-        StartCoroutine(NewOrderCo());
-    }
-
-    private IEnumerator NewOrderCo() 
-    {
-        yield return new WaitForSeconds(0.5f);
+    {        
         orderItems = GenerateOrder(LevelManager.Instance.CurrentLevel.orderItemSize, levelItems);
         EventManager.OnOrderGenerated.Invoke();
     }
-
     public void SetLevelItems()
     {
         levelItems = SelectLevelItems(LevelManager.Instance.CurrentLevel.levelItemSize);
     }
-
-
-
-    
     
 }

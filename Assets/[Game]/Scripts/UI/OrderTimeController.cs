@@ -11,14 +11,16 @@ public class OrderTimeController : MonoBehaviour
     private Tween customTween;
     private void OnEnable()
     {
+        EventManager.OnGameStarted.AddListener(EnableOrderSlider);
         EventManager.OnOrderGenerated.AddListener(StartOrderTimer);
-        EventManager.OnOrderCompleted.AddListener(DisableOrderSlider);        
+        EventManager.OnItemsPacked.AddListener(DisableOrderSlider);        
     }
 
     private void OnDisable()
     {
+        EventManager.OnGameStarted.RemoveListener(EnableOrderSlider);
         EventManager.OnOrderGenerated.RemoveListener(StartOrderTimer);
-        EventManager.OnOrderCompleted.RemoveListener(DisableOrderSlider);              
+        EventManager.OnItemsPacked.RemoveListener(DisableOrderSlider);              
     }
 
     private void EnableOrderSlider() 
@@ -27,13 +29,11 @@ public class OrderTimeController : MonoBehaviour
     }
 
     private void DisableOrderSlider()
-    {
-        orderSliderGo.SetActive(false);
-        customTween.Kill();
+    {   
+        customTween.Kill();        
     }
     private void StartOrderTimer() 
-    {
-        EnableOrderSlider();
+    {        
         float orderTime = LevelManager.Instance.CurrentLevel.orderTime;
         orderSlider.value = 1;        
         customTween = DOTween.To(() => orderSlider.value, (a) => orderSlider.value = a, 0, orderTime).OnComplete(()=>

@@ -13,17 +13,26 @@ public class ShowOrderUI : MonoBehaviour
     public List<Image> Size3Images = new List<Image>();
     public List<Image> Size4Images = new List<Image>();
     public List<GameObject> imageParents = new List<GameObject>();
+    public GameObject orderPanel;
 
     private void OnEnable()
     {
         EventManager.OnOrderGenerated.AddListener(ShowOrderIcon);
+        EventManager.OnLevelFailed.AddListener(DisableOrderPanel);
+        EventManager.OnLevelSuccesed.AddListener(DisableOrderPanel);
     }
 
     private void OnDisable()
     {
         EventManager.OnOrderGenerated.RemoveListener(ShowOrderIcon);
+        EventManager.OnLevelFailed.RemoveListener(DisableOrderPanel);
+        EventManager.OnLevelSuccesed.RemoveListener(DisableOrderPanel);
     }
 
+    private void DisableOrderPanel() 
+    {
+        orderPanel.SetActive(false);
+    }
 
     public void ShowOrderIcon()
     {
