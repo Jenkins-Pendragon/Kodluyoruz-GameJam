@@ -22,10 +22,9 @@ public class LevelManager : Singleton<LevelManager>
             PlayerPrefs.SetInt("LastLevel", value);
         }
     }
-
-    
-
-    
-  
+    public void LevelUp()
+    {
+        PlayerPrefs.SetInt("LastLevel", PlayerPrefs.GetInt("LastLevel") +1 );
+    }
 }
 
