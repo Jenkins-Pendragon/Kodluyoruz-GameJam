@@ -6,6 +6,7 @@ using System.Linq;
 public class OrderManager : Singleton<OrderManager>
 {    
     private List<Item> ItemList { get { return ItemDataBase.Instance.itemDataBase; }}
+    private Dictionary<string, Item> ActiveItems { get { return ItemDataBase.Instance.activeItems; } }
 
     //To select items in itemdatabase for the level
     public Dictionary<string, Item> SelectLevelItems(int levelItemSize)
@@ -52,8 +53,15 @@ public class OrderManager : Singleton<OrderManager>
     }
 
     public void NewOrder()
-    {        
-        orderItems = GenerateOrder(LevelManager.Instance.CurrentLevel.orderItemSize, levelItems);
+    {
+        if (ActiveItems.Count == 0)
+        {
+            orderItems = GenerateOrder(LevelManager.Instance.CurrentLevel.orderItemSize, levelItems);
+        }
+        else 
+        {
+            orderItems = GenerateOrder(LevelManager.Instance.CurrentLevel.orderItemSize, ActiveItems);
+        }        
         EventManager.OnOrderGenerated.Invoke();
     }
     public void SetLevelItems()

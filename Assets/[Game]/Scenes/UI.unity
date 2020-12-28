@@ -2906,7 +2906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 1250879176}
   fillArea: {fileID: 20288096}
-  happinessAmount: 100
+  happinessAmount: 20
   defaultHappiness: 20
 --- !u!114 &1917314304
 MonoBehaviour:

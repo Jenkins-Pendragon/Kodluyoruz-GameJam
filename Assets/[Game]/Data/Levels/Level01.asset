@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderItemSize: 1
   levelItemSize: 10
-  conveyorBeltSpeed: 1
+  conveyorBeltSpeed: 0.5
   spawnDelay: 1
   defaultItemScale: 0.3
   maxItemScale: 0.5

@@ -8,6 +8,18 @@ public class CustomPathFollower : MonoBehaviour
 
     private EndOfPathInstruction endOfPathInstruction = EndOfPathInstruction.Loop;
     public float distanceTravelled;
+    private void OnEnable()
+    {
+        EventManager.OnLevelSuccesed.AddListener(()=>speed=0);
+        EventManager.OnLevelFinished.AddListener(() => speed = 0);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnLevelSuccesed.RemoveListener(() => speed = 0);
+        EventManager.OnLevelFinished.RemoveListener(() => speed = 0);
+    }
+    
 
     //Responsible to initliaze script with paramaters
     public void Initialize(PathCreator pathCreator, float speed, float distanceTravelled)

@@ -208,12 +208,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59620647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.442, y: -0.306, z: -2.339}
+  m_LocalPosition: {x: 1.442, y: -0.306, z: -1.721}
   m_LocalScale: {x: 2.0397, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &70188850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2336192678741297115, guid: d7480d43a0f98794e83f7362318ee906,
+    type: 3}
+  m_PrefabInstance: {fileID: 7985995216401113975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &157147815
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +892,7 @@ GameObject:
   - component: {fileID: 1327905839}
   - component: {fileID: 1327905838}
   m_Layer: 0
-  m_Name: SpawnManager
+  m_Name: SpawnController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -901,6 +913,7 @@ MonoBehaviour:
   spawnLeft: {fileID: 504886633}
   spawnRight: {fileID: 2146766747}
   spawnRotation: {fileID: 714362967}
+  pathCreator: {fileID: 70188850}
 --- !u!4 &1327905839
 Transform:
   m_ObjectHideFlags: 0
@@ -24685,9 +24698,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.46226507
-  m_Height: 1.7541217
+  m_Height: 3.7321236
   m_Direction: 1
-  m_Center: {x: 0.007215352, y: 1.638602, z: 0.31992242}
+  m_Center: {x: 0.007215351, y: 0.64960086, z: 0.3199224}
 --- !u!1 &6639728693820918042
 GameObject:
   m_ObjectHideFlags: 0
