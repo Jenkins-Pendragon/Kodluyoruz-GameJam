@@ -53,7 +53,7 @@ public class OrderManager : Singleton<OrderManager>
     }
 
     public void NewOrder()
-    {
+    {        
         if (ActiveItems.Count == 0)
         {
             orderItems = GenerateOrder(LevelManager.Instance.CurrentLevel.orderItemSize, levelItems);
@@ -61,7 +61,25 @@ public class OrderManager : Singleton<OrderManager>
         else 
         {
             orderItems = GenerateOrder(LevelManager.Instance.CurrentLevel.orderItemSize, ActiveItems);
-        }        
+        }
+        Debug.Log("#######################");
+        Debug.Log("CurrentLevel:" + LevelManager.Instance.CurrentLevel);
+        for (int i = 0; i < orderItems.Count; i++)
+        {
+            Debug.Log("Order Items" + i+": " + orderItems.ElementAt(i).Key);
+        }
+        Debug.Log("#######################");
+
+        for (int i = 0; i < ActiveItems.Count; i++)
+        {
+            Debug.Log("ActiveItems" + i + ": " + ActiveItems.ElementAt(i).Key);
+        }
+        Debug.Log("#######################");
+        for (int i = 0; i < ActiveItems.Count; i++)
+        {
+            Debug.Log("LevelItems" + i + ": " + levelItems.ElementAt(i).Key);
+        }
+        Debug.Log("#######################");
         EventManager.OnOrderGenerated.Invoke();
     }
     public void SetLevelItems()

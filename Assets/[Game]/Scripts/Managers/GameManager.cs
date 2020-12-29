@@ -38,4 +38,12 @@ public class GameManager : Singleton<GameManager>
         EventManager.OnGameEnd.Invoke();        
     }
 
+    void Update()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+    }
+
 }
