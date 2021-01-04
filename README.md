@@ -1,3 +1,2 @@
-# PowerPuffBoyZz
+# Kodluyoruz-GameJam
  
-# Power Puff BoyZz Kodluyoruz Bootcamp - miniGameJam projesi
