@@ -1,3 +1,3 @@
-# Power Puff Girls Kodluyor
+# PowerPuffBoyZz
  
 # Power Puff Girls Kodluyoruz Bootcamp - miniGameJam projesi
